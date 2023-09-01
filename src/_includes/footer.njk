@@ -1,0 +1,64 @@
+ 
+{% import '_globals.njk' as globals %} 
+
+<footer class="bg-light front-section height-xl ptr-120 ">
+  <div class="container pb-64">
+    <div class="row">
+      <div class="col-xs-12 col-md-3 mb-24">
+        <div class="align-middle">
+          <div class="w-100 mb-48">
+            <a href="/index.html"  aria-label="slide carrousel" >  
+
+
+
+
+LOGO
+            </a>
+          </div>
+          <p class="p1">
+Texto de bienvenida
+          </p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-6 mb-24"></div>
+
+
+      <div class="col-xs-12 col-md-3 mb-24 sm:text-center">
+        <h3 class="fluid-4-l pl-64 pb-32">Dirección</h3>
+        <ul class="list-clear">
+
+          <li class=""> {{globals.direcciones[0].calle}} </li>
+          <li class=""> {{globals.direcciones[0].codigopostal}} </li>
+          <li class="pb-32"> {{globals.direcciones[0].ciudad}}</li>
+          <li class="">
+            <a  aria-label="link email" href="mailto: {{globals.direcciones[0].email}}"> {{globals.direcciones[0].email}} </a>
+          </li>
+          <li> {{globals.direcciones[0].telf}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container pt-16 pb-16 border-t">
+    <div class="row text-12-r ">
+      <div class="col-xs-12 col-sm-4 sm:text-center text-left mb-16"> © COPYRIGHT 2023. Todos los derechos reservados
+      </div>
+      <div class="col-xs-12 col-sm-4 sm:text-center text-center mb-16"> CREADO POR DIGITALSTRATEGY</div>
+      <div class="col-xs-12 col-sm-4 sm:text-center  text-right mb-16"> 
+
+    <a href="/legal/cookies"  aria-label="link aviso legal">
+           COOKIES
+          </a>
+              <a href="/legal/politicas"  aria-label="link aviso legal">
+          POLÍTICA DE PRIVACIDAD
+          </a>
+
+
+          <a href="/legal/aviso"  aria-label="link aviso legal">
+     AVISO
+          </a>
+ 
+  </div>
+
+
+
+</footer>

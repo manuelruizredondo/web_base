@@ -1,0 +1,8 @@
+
+{
+	"layout": "blog/blog_inner.njk",
+	"author": "Manuel R",
+	"tags": ["blog"],
+	"tag": "post",
+	"categoryName": "Blog"
+}
