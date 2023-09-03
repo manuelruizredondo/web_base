@@ -1,0 +1,27 @@
+
+
+@import 'abstract/_setup.scss';
+
+.cursor-follow {
+  position: fixed;
+  background-color: #f70154;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  z-index: 1000;
+  mix-blend-mode: difference;
+  user-select: none;
+  pointer-events: none;
+}
+
+.cursor {
+  position: fixed;
+  background-color: white;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  z-index: 100;
+  user-select: none;
+  pointer-events: none;
+  transform: scale(1);
+}

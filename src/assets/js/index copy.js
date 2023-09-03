@@ -1,8 +1,13 @@
+import LocomotiveScroll from 'locomotive-scroll';
 
 
-AOS.init();
 
-console.log("Hola, mundo!");
+
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('[data-scroll-container]'),
+  smooth: true
+});
+
 
 
 document.body.onscroll = function () {
@@ -30,6 +35,10 @@ var swiper = new Swiper(".swiper-container", {
     navigation: {
       nextEl: ".swiper-arrows .swiper-next",
       prevEl: ".swiper-arrows .swiper-prev",
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
     },
     breakpoints: {
 

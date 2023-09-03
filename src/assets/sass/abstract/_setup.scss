@@ -17,7 +17,8 @@ p3: ( 12px, 14px, 14px, 14px, 1.4, "regular", ),
 p4: ( 14px, 14px, 16px, 18px, 1.4, "medium", ), );
 
 $headersFluids: (
-  /*name :  fontsize, lineheight */ 12: (12px, 14px, 0.3),
+  /*name :  fontsize, lineheight */ 
+  12: (12px, 14px, 0.3),
   24: (14px, 24px, 1.2),
   32: (16px, 32px, 1.2),
   18: (18px, 24px, 1),
@@ -269,7 +270,7 @@ $c-dark-grey: #8e8e8e;
 $c-middle-grey: #e3e3e3;
 $c-light-grey: #f0f0f0;
 
-$c-primary: #292929;
+$c-primary: #111314;
 $c-error: #b40016;
 $c-info: #1a32a4;
 
@@ -282,7 +283,7 @@ $height-md: 200px;
 
 /*Custom template */
 
-$c-black: #212121;
+$c-black: $c-primary;
 
 $height-xl: 450px !default;
 

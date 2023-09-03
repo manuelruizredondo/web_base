@@ -8,37 +8,39 @@ eleventyComputed:
   metaKeywords: "key"
   metaRobots: "index, follow"
 ---
-<div class="container-fullpage ">
-  <div class="header-img has-light  bg-dark ">
-    <div class="video-bg">
-      <video poster="" autoplay="" muted="" loop="">
-        <source src="/assets/static/satin.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="container ">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="height-full-2 is-flex flex-column content-center">
-            <h1 class="fluid-160-b mb-16 mt-40" data-aos="fade-up"> Digital Strategy
-            </h1>
-            <br>
-            <div class="fluid-48-b mb-16" data-aos="fade-up" data-aos-delay="200">Ayudamos a las marcas
+
+  <section  >
+    <div class="header-img has-light  bg-dark ">
+      <div class="video-bg">
+        <video poster="" autoplay="" muted="" loop="">
+          <source src="/assets/static/satin.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="container ">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="height-full-2 is-flex flex-column content-center">
+              <h1 class="fluid-160-b mb-16 mt-40" > Digital Strategy
+              </h1>
               <br>
-              con diseños
-              convincentes y persuasivos.
+              <div class="fluid-48-b mb-16"  >Ayudamos a las marcas
+                <br>
+                con diseños
+                convincentes y persuasivos.
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <section class="bg-dark has-light height-full-2 front-section ptr-120 pbr-120">
+  </section>
+  <section    class="bg-dark has-light height-full-2 front-section ptr-120 pbr-120">
     <div class="container">
 
 
       <div class="row mb-32">
         <div class="col-xs-12 col-md-4">
-          <div data-aos="fade-up" data-aos-delay="200" class="is-flex flex-column">
+          <div   class="is-flex flex-column">
             <h2 class="fluid-100-b  ">No hacemos webs,
               creamos estrategias</h2>
           </div>
@@ -48,18 +50,18 @@ eleventyComputed:
 
       <div class="row">
         <div class="col-xs-6">
-          <span data-aos="fade-up" data-aos-delay="400" class="fluid-32-l">
+          <span   class="fluid-32-l">
             Desarrollando estrategias desde el 2001, hemos tenido el privilegio de trabajar con más de 500 clientes en
             todo el mundo, incluidas start ups, pymes, grandes corporaciones y organizaciones gubernamentales . Con
             nuestra experiencia en la comprensión de la dinámica de la industria y la mentalidad de la audiencia
           </span>
-          <div><a data-aos="fade-up" data-aos-once="true" data-aos-delay="600" class="link-line" href="/about/">LA
+          <div><a    class="link-line" href="/about/">LA
               CLÍNICA </a></div>
         </div>
       </div>
     </div>
   </section>
-  <section id="featured-articles" class="featured-articles front-section bg-dark has-light pt-64 ">
+  <section   id="featured-articles" class="featured-articles front-section bg-dark has-light pt-64 ">
     <div class="container mb-64">
       <div class="row">
         <div class="col-xs-12">
@@ -72,13 +74,44 @@ eleventyComputed:
         <div class="col-xs-12">
           <ul role="list" class="list-clear flow">
             {% for proyectos in collections.proyectos %}
-            {% include 'proyectos-loop.njk' %}
+            {% include 'proyectos/proyectos-loop.njk' %}
             {% endfor %}
           </ul>
         </div>
       </div>
     </div>
   </section>
-  {# {% include 'swiper.njk' %} #}
-  {% include "banner.njk" %}
-</div>
+
+
+
+
+
+    <section id="sectionPin">
+      <div class="pin-wrap">
+
+
+          <div class="panel">
+            <img src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+              alt="">
+          </div>
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua.</h2>
+          <div class="panel">
+            <img src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+              alt="">
+              <div class="box-1 box">
+                box-1
+              </div>
+          </div>
+          <div class="panel">
+            <img src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+              alt="">
+          </div>
+      </div>
+    </section>
+
+
+
+
+
+

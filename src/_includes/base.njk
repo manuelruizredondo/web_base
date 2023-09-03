@@ -9,19 +9,15 @@
     <meta name="robots" content="{{ metaRobots}}">
     <meta name="description" content="{{ metaDescription or eleventyComputed.metaDescription or metadata.description }}">
     <meta name="keywords" content="{{ metaKeywords or eleventyComputed.metaKeywords or metaKeywords.description }}">
-    <link rel="icon" type="image/webp" href="https://www.empresa.com/assets/static/about-0.webp"/>
+    <link rel="icon" type="image/webp" href=""/>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="canonical" href="https://www.empresa.com{{ page.url | url }}">
-
-
     <meta property="og:site_name" content="empresa">
-    <meta property="og:image" content="https://www.empresa.com/assets/static/about-0.webp">
+    <meta property="og:image" content="">
     <meta property="og:title" content="{{title}}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.empresa.com">
     <meta property="og:description" content="{{ metaKeywords or eleventyComputed.metaKeywords or metaKeywords.description }}">
-
-
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -41,24 +37,29 @@
     </script>
     <!-- End Google Tag Manager -->
   </head>
-  <body class="contain {% if page.url == '/' or page.url == '/about/' %}home{% endif %}">
-
-
+  <body  class="contain {% if page.url == '/' or page.url == '/about/' %}home{% endif %}">
 <!-- Google Tag Manager (noscript) -->  
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id= {{global.tag_manager}}"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
     {% include 'header.njk' %}
-    <main class=" "> 
+<div data-scroll-container>
+<div class="cursor"  ></div>
+<div class="cursor-follow" ></div>
       {{ content | safe }}
-    </main>
   {% include 'footer.njk' %}
+</div>
+
+
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script type="module" src="/assets/js/index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+  <script src=" https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js "></script>
+  <script src="   https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js "></script>
+
+
+    <script type="module" src="/index.js"></script>
     <script>
       const handleSubmit = (event) => {
         event.preventDefault();
@@ -75,6 +76,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           .catch((error) => alert(error));
       };
     </script>
-    <link async rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
   </body>
 </html>

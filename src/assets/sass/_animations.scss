@@ -1,0 +1,194 @@
+
+
+@import 'abstract/_setup.scss';
+
+
+.img-wrap .img-inner {
+  position: absolute;
+  right: 0;
+  transform: translateY(100%);
+  opacity: 0;
+  background-size: cover;
+}
+
+.kv-block11-num {
+  position: relative;
+  display: inline-block;
+  text-align: right;
+  height: 16px;
+  width: 100px;
+}
+
+.kv-block11-num:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+}
+
+.order-1 {
+  animation-delay: .3s!important
+}
+.order-2 {
+  animation-delay: .6s!important
+}
+.order-3 {
+  animation-delay: .9s!important
+}
+.order-4 {
+  animation-delay: 1.2s!important
+}
+.order-5 {
+  animation-delay: 1.5s!important
+}
+
+.vertical-inner,
+.kv-block-text {
+  transform: translateY(100px);
+  opacity: 0;
+
+
+}
+
+
+
+@keyframes verticalFadeIn {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes verticalReveal {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes numFade {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(100px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100px);
+    opacity: 1;
+  }
+}
+@keyframes lineFade {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100px;
+  }
+  100% {
+    width: 100px;
+  }
+}
+@keyframes verticalImage {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.opened{
+  .kv-block11-num {
+    .num {
+      animation: 3s numFade  1 cubic-bezier(0.19, 1, 0.22, 1);
+      animation-fill-mode: both;
+    }
+    &:after {
+      animation: 3s lineFade 1 cubic-bezier(0.19, 1, 0.22, 1);
+      animation-fill-mode: both;
+    }
+  }
+  .rat-3-2 {
+    opacity: 1;
+  }
+  .vertical-inner {
+    animation: 1.5s verticalReveal 1 cubic-bezier(0.19, 1, 0.22, 1);
+    animation-fill-mode: both;
+  }
+  .kv-block-text {
+    animation: 1.5s verticalReveal 1 cubic-bezier(0.19, 1, 0.22, 1);
+    animation-fill-mode: both;
+  }
+  .img-wrap  .img-inner{
+      width:100%;
+      animation: 1.5s verticalImage 1 cubic-bezier(0.19, 1, 0.22, 1);
+      animation-fill-mode: both;
+    }
+   .kv-block11-num:after {
+      animation: lineFade 3s cubic-bezier(.19,1,.22,1) 1;
+      animation-fill-mode: both;
+  }
+}
+
+
+
+.kv-block11-num {
+	position: relative;
+	display: inline-block;
+	text-align: right;
+	height: 16px;
+	width: 100px;
+  
+	&:after {
+	  position: absolute;
+	  content: "";
+	  top: 50%;
+	  transform: translateY(-50%);
+	  left: 0;
+	  width: 0;
+	  height: 2px;
+	  background-color: #fff;
+	}
+	 .num {
+	  position: absolute;
+	  top: 0;
+	  opacity: 0;
+	}
+  }
+  
+  
+  .aos-animate{
+  
+	.kv-block11-num:after {
+	  animation: lineFade 3s cubic-bezier(.19,1,.22,1) 1;
+	  animation-fill-mode: both;
+	}
+	.kv-block11-num {
+	  .num {
+		animation: 3s numFade  1 cubic-bezier(0.19, 1, 0.22, 1);
+		animation-fill-mode: both;
+	  }
+	  &:after {
+		animation: 3s lineFade 1 cubic-bezier(0.19, 1, 0.22, 1);
+		animation-fill-mode: both;
+	  }
+	}
+  
+  }
+  

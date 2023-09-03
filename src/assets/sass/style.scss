@@ -4,6 +4,8 @@
 $btn-radius: 50px;
 $padding-global: 24px;
 @import "../../../node_modules/holygrailcss/scss/style.scss";
+@import "_animations.scss";
+@import "_cursor.scss";
 @import "_menu.scss";
 @import "_blog.scss";
 @import "_video.scss";
@@ -127,10 +129,10 @@ header {
 }
 header.interior {
   a {
-    color: #212121;
+    color: $c-primary;
   }
   svg path {
-    fill: #212121;
+    fill:  $c-primary;
   }
 }
 .header-top {
@@ -151,10 +153,7 @@ header.interior {
   padding-top: 0;
 }
 
-main {
-  
-overflow: hidden;
-}
+
 .flex-titles {
   display: flex;
   align-items: flex-start;
@@ -476,4 +475,59 @@ font-size: 24px;
   padding-left: 0;
   padding-right: 0;
   border-radius: 0;
+}
+
+body{
+  height: 100vh;
+  background-color: $c-primary;
+}
+.has-scroll-smooth body,
+html.has-scroll-smooth {
+  overflow: hidden;
+  backface-visibility: hidden;
+	transform: translateZ(0);
+}
+[data-load-container] {
+  perspective: 1px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+}
+
+
+
+
+
+.pin-wrap {
+  height: 500px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px 20px;
+
+  & > * {
+    min-width: 60vw;
+    padding: 0 5vw;
+  }
+}
+#sectionPin {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  left: 0;
+  background: black;
+  color: red;
+  display: flex;
+  align-items: center;
+}
+
+.panel{
+  position: relative;
+  height: 400px;
+  img{
+    height: 100%;
+  }
 }
