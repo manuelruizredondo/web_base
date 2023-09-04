@@ -1,80 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="{{global.search_console}}"/>
-    <title>{{title}}</title>
-    <meta name="robots" content="{{ metaRobots}}">
-    <meta name="description" content="{{ metaDescription or eleventyComputed.metaDescription or metadata.description }}">
-    <meta name="keywords" content="{{ metaKeywords or eleventyComputed.metaKeywords or metaKeywords.description }}">
-    <link rel="icon" type="image/webp" href=""/>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="canonical" href="https://www.empresa.com{{ page.url | url }}">
-    <meta property="og:site_name" content="empresa">
-    <meta property="og:image" content="">
-    <meta property="og:title" content="{{title}}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.empresa.com">
-    <meta property="og:description" content="{{ metaKeywords or eleventyComputed.metaKeywords or metaKeywords.description }}">
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer'
-            ? '&l=' + l
-            : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f
-          .parentNode
-          .insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', '{{global.tag_manager}}');
-    </script>
-    <!-- End Google Tag Manager -->
-  </head>
-  <body  class="contain {% if page.url == '/' or page.url == '/about/' %}home{% endif %}">
-<!-- Google Tag Manager (noscript) -->  
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id= {{global.tag_manager}}"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="{{global.search_console}}" />
+  <title>{{title}}</title>
+  <meta name="robots" content="{{ metaRobots}}">
+  <meta name="description" content="{{ metaDescription or eleventyComputed.metaDescription or metadata.description }}">
+  <meta name="keywords" content="{{ metaKeywords or eleventyComputed.metaKeywords or metaKeywords.description }}">
+  <link rel="icon" type="image/webp" href="" />
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="canonical" href="https://www.empresa.com{{ page.url | url }}">
+  <meta property="og:site_name" content="empresa">
+  <meta property="og:image" content="">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.empresa.com">
+  <meta property="og:description"
+    content="{{ metaKeywords or eleventyComputed.metaKeywords or metaKeywords.description }}">
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer'
+          ? '&l=' + l
+          : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f
+        .parentNode
+        .insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', '{{global.tag_manager}}');
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+<body class="contain {% if page.url == '/' or page.url == '/about/' %}home{% endif %}" data-barba="wrapper"  >
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id= {{global.tag_manager}}" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="load-container">
+    <div class="loading-screen"></div>
+  </div>
+
+
+  <div data-barba="container" data-barba-namespace="home" class="is-home">
     {% include 'header.njk' %}
-<div data-scroll-container>
-<div class="cursor"  ></div>
-<div class="cursor-follow" ></div>
+
+    <div class="cursor"></div>
+    <div class="cursor-follow"></div>
+
+
+    <div data-scroll-container>
+      <div class="bg"> </div>
       {{ content | safe }}
-  {% include 'footer.njk' %}
-</div>
+      {% include 'footer.njk' %}
+    </div>
+  </div>
+
 
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
   <script src=" https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js "></script>
   <script src="   https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js "></script>
+  <script src=" https://cdn.jsdelivr.net/npm/@barba/core@2.9.7/dist/barba.umd.min.js "></script>
 
-
-    <script type="module" src="/index.js"></script>
-    <script>
-      const handleSubmit = (event) => {
-        event.preventDefault();
-        const myForm = event.target;
-        const formData = new FormData(myForm);
-        fetch("/", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-          },
-          body: new URLSearchParams(formData).toString()
-        })
-          .then(() => console.log("Form successfully submitted"))
-          .catch((error) => alert(error));
-      };
-    </script>
-  </body>
+  <script type="module" src="/index.js"></script>
+  <script>
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      const myForm = event.target;
+      const formData = new FormData(myForm);
+      fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: new URLSearchParams(formData).toString()
+      })
+        .then(() => console.log("Form successfully submitted"))
+        .catch((error) => alert(error));
+    };
+  </script>
+</body>
 </html>
