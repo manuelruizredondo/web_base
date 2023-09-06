@@ -1,14 +1,26 @@
+import LocomotiveScroll from "locomotive-scroll";
+import "regenerator-runtime/runtime";
+import barba from "@barba/core";
+import { gsap, Expo } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Swiper from "swiper";
+
+
+
 
 
 gsap.registerPlugin(ScrollTrigger);
 
-let ciclo = true;
+
 let scroll;
 const body = document.body;
 const select = (e) => document.querySelector(e);
 const selectAll = (e) => document.querySelectorAll(e);
 //const container = select('.site-main');
 
+
+let colors = ['black', 'black', 'blue', 'gray', 'black', 'gray'];
+let ciclo = true;
 
 initPageTransitions();
 
@@ -69,7 +81,7 @@ function initPageTransitions() {
 			smooth: true,
 			getDirection: true,
 		});
-		scroll.on("scroll", ScrollTrigger.update);
+
 		ScrollTrigger.scrollerProxy("[data-scroll-container]", {
 			scrollTop(value) {
 				return arguments.length
@@ -90,17 +102,21 @@ function initPageTransitions() {
 				: "fixed",
 		});
 		if (!document.querySelector(".pin-wrap")) {
-			console.log("no existe pin-wrap" + container);
+
 		} else {
-			console.log("si existe" + container);
+	
 			homeActions(container);
 		}
-		changeBackgroundColorOnScrollEnter();
+
 		
 		const scrollbar = selectAll(".c-scrollbar");
 		if (scrollbar.length > 1) {
 			scrollbar[0].remove();
 		}
+
+
+		changeBackgroundColorOnScrollEnter();
+		scroll.on("scroll", ScrollTrigger.update);
 		ScrollTrigger.addEventListener("refresh", () => scroll.update());
 		ScrollTrigger.refresh();
 	}
@@ -195,7 +211,6 @@ function cursor() {
 function homeActions(container) {
 	const loader = select(".bg");
 	initbg();
-	console.log("entramos en homeactions");
 	
 	let pinWrap = document.querySelector(".pin-wrap");
 	let pinWrapWidth = pinWrap.offsetWidth;
@@ -214,39 +229,9 @@ function homeActions(container) {
 		x: -horizontalScrollLength,
 		ease: "none",
 	});
-	gsap.to(".outtext-1 .intext", {
-		delay: 0.2,
-		top: "0",
-		duration: 1,
-		ease: Expo.easeInOut,
-	});
-	gsap.to(".outtext-2 .intext", {
-		delay: 0.4,
-		top: "0",
-		duration: 1,
-		ease: Expo.easeInOut,
-	});
-	gsap.to(".outtext-3 .intext", {
-		delay: 0.5,
-		top: "0",
-		duration: 1,
-		ease: Expo.easeInOut,
-	});
-	gsap.to(".outtext-4 .intext", {
-		delay: 0.6,
-		top: "0",
-		duration: 1,
-		ease: Expo.easeInOut,
-	});
-	gsap.to(".image-digital", {
-		delay: 0.7,
-		opacity: "1",
-		duration: 1,
-		ease: Expo.easeInOut,
-	});
 
 
-	gsap.set('.box-1', { y: 100 });
+
 
 
 	let sections = gsap.utils.toArray('.panel');
@@ -282,12 +267,20 @@ function homeActions(container) {
 
 }
 
+
+
 function changeBackgroundColorOnScrollEnter() {
 	setTimeout(function () {
 	  scroll.on('call', (value, way, obj) => {
+
+
+		console.log(obj);
+
 		const objeto = obj.id.split(' ');
 		const primero = objeto[0];
 		const segundo = objeto[1];
+  
+  
   
 		if (way === 'enter') {
 		  switch (value) {

@@ -1,87 +1,81 @@
 ---
-layout: base.njk
+layout: base_inner.njk
 ---
 
-  <div class="load-container">
-    <div class="loading-screen"></div>
-  </div>
-
-
-<main data-barba="container" data-barba-namespace="interior" class="is-interior" data-scroll-container>
-
-
   <div class="video-bg">
-        <video poster="" autoplay="" muted="" loop="">
-          <source src="/assets/static/satin.mp4" type="video/mp4" />
-        </video>
-      </div>
-<div class="container-fullpage bleed-0 bg-dark has-light">
-{% include 'hero.njk' %}
-</div>
-<section class="front-section bg-light">
-  <div class="container text-center height-xl align-center">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="fluid-100-b  c-primary">
-{{ content | safe }}
- texto
+    <video poster="" autoplay="" muted="" loop="">
+      <source src="/assets/static/satin.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="container-fullpage bleed-0 bg-dark has-light">
+    {% include 'hero.njk' %}
+  </div>
+  <section class="front-section bg-light">
+    <div class="container text-center height-xl align-center">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="fluid-100-b  c-primary">
+            {{ content | safe }}
+            texto
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="front-section bg-light">
-  <div class="info-bar  c-primary">
-    <div class="info-bar-box">
-      <div class="fluid-7-l"> Texto </div>
+  </section>
+  <section class="front-section bg-light">
+    <div class="info-bar  c-primary">
+      <div class="info-bar-box">
+        <div class="fluid-7-l"> Texto </div>
+      </div>
+      <div class="info-bar-box">
+        <div class="fluid-7-l"> Texto</div>
+      </div>
+      <div class="info-bar-box">
+        <div class="fluid-7-l"> Texto </div>
+      </div>
     </div>
-    <div class="info-bar-box">
-      <div class="fluid-7-l"> Texto</div>
-    </div>
-    <div class="info-bar-box">
-      <div class="fluid-7-l"> Texto  </div>
-    </div>
-  </div>
-</section>
-<section class="front-section bg-dark has-light">
-  <div class="container pb-64 p-body front-section ptr-120">
-    <div class="row">
-      <div class="col-xs-12 col-md-5 mdmax:mb-42 ">
-        <div class="fluid-7-l">
-     Texto
+  </section>
+  <section class="front-section bg-dark has-light">
+    <div class="container pb-64 p-body front-section ptr-120">
+      <div class="row">
+        <div class="col-xs-12 col-md-5 mdmax:mb-42 ">
+          <div class="fluid-7-l">
+            Texto
+          </div>
         </div>
-      </div>
-      <div class="col-xs-12 col-md-1"></div>
-      <div class="col-xs-12 col-md-6">
-        <img width="100%"  height="100%" src="https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-      </div>
-    </div>
-  </div>
-  <div class="container-fullpage bleed-0 mb-64">
-    <div class="row text-center">
-      <div class="col-xs-12">
-        <div class="fluid-100-b">
-  Texto
+        <div class="col-xs-12 col-md-1"></div>
+        <div class="col-xs-12 col-md-6">
+          <img width="100%" height="100%"
+            src="https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="">
         </div>
       </div>
     </div>
-  </div>
-  <div class="container-6 mbr-128">
-    <div class="row">
-      <div class="col-xs-12">
-        <p class="p2 mb-16">
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed repellat soluta eveniet quibusdam nulla iste, porro recusandae sapiente. 
-        </p>
-        <p class="p2 mb-16">
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed repellat soluta eveniet quibusdam nulla iste, porro recusandae sapiente. 
-        </p>
-            <p class="h3">
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed repellat soluta eveniet quibusdam nulla iste, porro recusandae sapiente. 
-        </p>
+    <div class="container-fullpage bleed-0 mb-64">
+      <div class="row text-center">
+        <div class="col-xs-12">
+          <div class="fluid-100-b">
+            Texto
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-
-</main>
+    <div class="container-6 mbr-128">
+      <div class="row">
+        <div class="col-xs-12">
+          <p class="p2 mb-16">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed repellat soluta eveniet quibusdam nulla iste,
+            porro recusandae sapiente.
+          </p>
+          <p class="p2 mb-16">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed repellat soluta eveniet quibusdam nulla iste,
+            porro recusandae sapiente.
+          </p>
+          <p class="h3">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed repellat soluta eveniet quibusdam nulla iste,
+            porro recusandae sapiente.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
