@@ -1,12 +1,3 @@
-import LocomotiveScroll from "locomotive-scroll";
-import "regenerator-runtime/runtime";
-import barba from "@barba/core";
-import { gsap, Expo } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Swiper from "swiper";
-
-
-
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -34,6 +25,9 @@ function delay(n) {
 		}, n);
 	});
 }
+
+
+
 function initPageTransitions() {
 	barba.hooks.before(() => {
 		select("html").classList.add("is-transitioning");
