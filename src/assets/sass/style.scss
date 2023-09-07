@@ -517,6 +517,7 @@ html.has-scroll-smooth {
   height: 100vh;
   overflow: hidden;
   display: flex;
+  z-index: 10;
   left: 0;
   background: black;
   color: red;
@@ -565,4 +566,20 @@ html.has-scroll-smooth {
   background: $primary;
 
   z-index: 1;
+}
+
+
+.container-color{
+  position: relative;
+  z-index: 10;
+}
+.footer{
+  position: relative;
+  z-index: 1;
+}
+
+.pined {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }

@@ -51,11 +51,11 @@
   </div>
 
   <div data-barba="container" data-barba-namespace="home" class="is-home">
-
+    {% include 'header.njk' %}
     <div class="cursor"></div>
     <div class="cursor-follow"></div>
-    <div class="container-color" data-scroll-container>
-      <div class="bg"> </div>
+    <div data-scroll-container>
+
       
       {{ content | safe }}
       {% include 'footer.njk' %}
