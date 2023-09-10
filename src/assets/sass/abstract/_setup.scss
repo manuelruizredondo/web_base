@@ -18,7 +18,7 @@ p4: ( 14px, 14px, 16px, 18px, 1.4, "medium", ), );
 
 $headersFluids: (
   /*name :  fontsize, lineheight */ 
-  12: (12px, 14px, 0.3),
+  12: (12px, 16px, 0.3),
   24: (14px, 24px, 1.2),
   32: (16px, 32px, 1.2),
   18: (18px, 24px, 1),
@@ -111,7 +111,7 @@ $margin-bottom: (
     64px,
     64px,
   ),
-  mbr-128: (
+  mb-big: (
     64px,
     128px,
     128px,
@@ -169,7 +169,7 @@ $padding-top: (
     50px,
     64px,
   ),
-  ptr-120: (
+  pt-big: (
     64px,
     64px,
     100px,
@@ -227,7 +227,7 @@ $padding-bottom: (
     50px,
     64px,
   ),
-  pbr-120: (
+  pb-big: (
     64px,
     64px,
     100px,

@@ -70,8 +70,14 @@ function initPageTransitions() {
     scroll = new LocomotiveScroll({
       el: container.querySelector("[data-scroll-container]"),
       smooth: true,
-	  repeat: true,
+	    repeat: true,
       getDirection: true,
+      smartphone: {
+        smooth: true,
+      },
+      tablet: {
+        smooth: true,
+      },
     });
     ScrollTrigger.scrollerProxy("[data-scroll-container]", {
       scrollTop(value) {
@@ -133,6 +139,7 @@ function initbg() {
 }
 function initPage() {
   cursor();
+  initbg();
 }
 function cursor() {
   var cursor = document.querySelector(".cursor");
@@ -223,18 +230,7 @@ function homeActions(container) {
     },
   });
   // red section
-  gsap.to(".box-1", {
-    y: -130,
-    duration: 2,
-    ease: "elastic",
-    scrollTrigger: {
-      trigger: ".box-1",
-      containerAnimation: scrollTween,
-      start: "left center",
-      toggleActions: "play none none reset",
-      id: "1",
-    },
-  });
+
 }
 function changeBackgroundColorOnScrollEnter() {
   setTimeout(function () {

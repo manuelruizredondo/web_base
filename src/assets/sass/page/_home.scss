@@ -1,0 +1,21 @@
+.image-digital {
+    position: absolute;
+    right: 5%;
+    top: 20px;
+    width: 65%;
+    @media (min-width: 1280px) {
+      right: 5%;
+      top: 100px;
+      width: 35%;
+    }
+  }
+
+  .container-color {
+    position: relative;
+    z-index: 10;
+  }
+
+
+  .text-digital{
+    
+  }

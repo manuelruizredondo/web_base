@@ -8,102 +8,119 @@ eleventyComputed:
   metaKeywords: "key"
   metaRobots: "index, follow"
 ---
+<section class=" slide-section ">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 has-light">
+        <div data-scroll data-scroll-speed="2" class="height-full is-flex flex-column content-center ">
+          <h1 class="fluid-160-b">
+            Digital
+            Strategy
 
-  <section data-scroll   data-scroll-offset="50%,50%" data-scroll-call="pageColor" data-scroll-id="3 darkmode" >
-    <div class="header-img has-light  bg-dark ">
-      <div class="video-bg">
-        <video poster="" autoplay="" muted="" loop="">
-          <source src="/assets/static/satin.mp4" type="video/mp4">
-        </video>
+              <div id="miVariableGlobal">Valor inicial: {{ miVariableGlobal }}</div>
+
+          </h1>
+          <h1 class="fluid-48-b">
+            Ayudamos a las marcas con diseños
+            convincentes y <b> persuasivos</b>.
+          </h1>
+        </div>
       </div>
-      <div class="container ">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="height-full-2 is-flex flex-column content-center">
-              <h1 class="fluid-160-b mb-16 mt-40" > Digital Strategy
-              </h1>
-              <br>
-              <div class="fluid-48-b mb-16"  >Ayudamos a las marcas
-                <br>
-                con diseños
-                convincentes y persuasivos.
-              </div>
-            </div>
-          </div>
+      <div data-scroll data-scroll-offset="50%,50%" data-scroll-speed="0.2" class="col-xs-6">
+        <img src="https://digitalstrategy.netlify.app/assets/images/solo2.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+<section data-scroll data-scroll-offset="50%,50%" data-scroll-class="opened" data-scroll-call="pageColor"
+  data-scroll-id="3 darkmode" class=" has-light height-full-2 front-section ptr-120 pbr-120">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div data-scroll data-scroll-speed="2" class="fluid-48-b">
+          No hacemos webs, <br>
+          creamos estrategias
         </div>
       </div>
     </div>
-  </section>
-
-
-<section data-scroll   data-scroll-offset="50%,50%" data-scroll-call="pageColor" data-scroll-id="3 darkmode" 
-   class="bg-dark has-light height-full-2 front-section ptr-120 pbr-120">
-    <div class="container">
-
-
-      <div class="row mb-32">
-        <div class="col-xs-12 col-md-4">
-          <div   class="is-flex flex-column">
-            <h2 class="fluid-100-b  ">No hacemos webs,
-              creamos estrategias</h2>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="row">
-        <div class="col-xs-6">
-          <span   class="fluid-32-l">
-            Desarrollando estrategias desde el 2001, hemos tenido el privilegio de trabajar con más de 500 clientes en
-            todo el mundo, incluidas start ups, pymes, grandes corporaciones y organizaciones gubernamentales . Con
-            nuestra experiencia en la comprensión de la dinámica de la industria y la mentalidad de la audiencia
-          </span>
-          <div><a    class="link-line" href="/about/">LA
-              CLÍNICA </a></div>
+    <div class="row">
+      <div class="col-xs-6">
+        <div data-scroll data-scroll-speed="2" class="fluid-32-l">
+          Desarrollando estrategias desde el 2001, hemos tenido el privilegio de trabajar con más de 500 clientes en
+          todo el mundo, incluidas start ups, pymes, grandes corporaciones y organizaciones gubernamentales . Con
+          nuestra experiencia en la comprensión de la dinámica de la industria y la mentalidad de la audiencia
         </div>
       </div>
     </div>
-  </section>
-
-   
-
- <section id="sectionPin"   data-scroll   data-scroll-offset="50%,50%" data-scroll-call="pageColor" data-scroll-id="3 darkmode"  >
-      <div class="pin-wrap">
-          <div class="panel">
-            <img src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-              alt="">
-          </div>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua.</h2>
-          <div class="panel">
-            <img src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-              alt="">
-              <div class="box-1 box">
-                box-1
-              </div>
-          </div>
-          <div class="panel">
-            <img src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-              alt="">
-          </div>
+  </div>
+</section>
+<section data-scroll data-scroll-offset="50%,50%">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12  col-sm-6">
+        <div class="fluid-100-b pt-big pb-big">
+          Nuestros
+          Proyectos
+        </div>
       </div>
-    </section> 
-
-
-
-
-
-    <ul role="list" class="list-clear flow container-color">
-      {% for proyectos in collections.proyectos %}
-      {% include 'proyectos/proyectos-loop.njk' %}
-      {% endfor %}
-    </ul>
-
-
-
-
-
-
-
-
-
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div role="list" class="list-clear flow ">
+          {% for proyectos in collections.proyectos %}
+          {% include 'proyectos/proyectos-loop.njk' %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="sectionPin" data-scroll data-scroll-offset="50%,50%">
+  <div class="pin-wrap">
+    <div class="panel">
+      <div class="panel-img"> <img
+          src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+          alt=""> </div>
+      <div class="panel-text">
+                <div data-scroll data-scroll-speed="2" class="fluid-48-b"> No hacemos webs </div>
+                <div data-scroll data-scroll-speed="2" class="fluid-12-r"> No hacemos webs </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-img"> <img
+          src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+          alt=""> </div>
+      <div class="panel-text">
+                         <div data-scroll data-scroll-speed="2" class="fluid-48-b mb-32"> No hacemos webs </div>
+                <div data-scroll data-scroll-speed="2" class="fluid-12-r"> No hacemos webs </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-img"> <img
+          src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+          alt=""> </div>
+      <div class="panel-text">
+                         <div data-scroll data-scroll-speed="2" class="fluid-48-b mb-32"> No hacemos webs </div>
+                <div data-scroll data-scroll-speed="2" class="fluid-12-r"> No hacemos webs </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-img"> <img
+          src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+          alt=""> </div>
+      <div class="panel-text">
+                         <div data-scroll data-scroll-speed="2" class="fluid-48-b mb-32"> No hacemos webs </div>
+                <div data-scroll data-scroll-speed="2" class="fluid-12-r"> No hacemos webs </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-img"> <img
+          src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+          alt=""> </div>
+      <div class="panel-text">
+                         <div data-scroll data-scroll-speed="2" class="fluid-48-b mb-32"> No hacemos webs </div>
+                <div data-scroll data-scroll-speed="2" class="fluid-12-r"> No hacemos webs </div>
+      </div>
+    </div>
+  </div>
+</section>

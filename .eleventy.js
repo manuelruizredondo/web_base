@@ -23,6 +23,10 @@ const mdAnchorOpts = {
 };
 
 module.exports = function (eleventyConfig) {
+
+  eleventyConfig.addGlobalData("miVariableGlobal", "valorInicial");
+
+
   eleventyConfig.addPassthroughCopy("./src/css/style.css");
   eleventyConfig.addPassthroughCopy("./src/assets");
   eleventyConfig.addPassthroughCopy("src/pages", "pages");

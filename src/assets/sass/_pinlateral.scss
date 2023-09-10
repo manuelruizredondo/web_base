@@ -1,0 +1,52 @@
+.pin-wrap {
+	height: 500px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0px 20px;
+	& > * {
+	  min-width: 100vw;
+	  padding: 0 5vw;
+	}
+  }
+  #sectionPin {
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	z-index: 10;
+	left: 0;
+	color: white;
+	display: flex;
+	align-items: center;
+  }
+
+
+  .panel {
+	position: relative;
+	display: flex;
+	align-items: center;
+	height: 400px;
+	img {
+	  height: 100%;
+	}
+
+	.panel-img {
+		width: 50%;
+		position: relative;
+
+	
+	  }
+	.panel-text {
+		width: 50%;
+		padding: 100px;
+		position: relative;
+
+	
+	  }
+
+
+
+
+  }
+
+

@@ -1,0 +1,59 @@
+.main-image {
+    position: absolute;
+    left: 50%;
+    top: 15vw;
+    animation: 1s slideUpAndFade cubic-bezier(0.19, 1, 0.22, 1) 0.7s;
+    animation-fill-mode: both;
+    z-index: 11;
+  }
+
+
+  .height-hero {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      background-color: white;
+      height: 100%;
+      z-index: 1;
+    }
+    @media (max-width: #{$break-sm - 1}) {
+      min-height: 0;
+      padding-top: 80px;
+      padding-bottom: 60px;
+    }
+    @media (min-width: $break-sm) {
+      min-height: 80vh;
+    }
+  }
+
+  .height-hero + .section {
+    @media screen and (max-width:  #{$break-sm - 1}) {
+      padding-top: 40vw;
+    }
+    @media (min-width: $break-md) {
+      padding-top: 27.8125vw;
+      padding-bottom: 0;
+    }
+  }
+  .section {
+    position: relative;
+    z-index: 10;
+    @media screen and (max-width: 1000px) {
+      padding: 6em 2.5em 4em 2.5em;
+    }
+    padding: 8em 12em 8em 12em;
+  }
+
+
+
+header.interior {
+  a {
+    color: $c-primary;
+  }
+  svg path {
+    fill: $c-primary;
+  }
+}
+

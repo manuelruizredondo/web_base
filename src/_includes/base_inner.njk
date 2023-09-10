@@ -48,18 +48,15 @@
   <div class="load-container">
     <div class="loading-screen"></div>
   </div>
-  <div data-barba="container" data-barba-namespace="home" class="is-home">
+
+  <div data-barba="container" data-barba-namespace="interior" class="is-interior">
     {% include 'header.njk' %}
+
     <div class="cursor"></div>
     <div class="cursor-follow"></div>
-    <div class="container-color"  data-scroll-container>
+    <div  data-scroll-container>
 
-      <div class="load-container">
-        <div class="loading-screen"></div>
-      </div>
-      <main data-barba="container" data-barba-namespace="interior" class="is-interior">
         {{ content | safe }}
-      </main>
       {% include 'footer.njk' %}
     </div>
   </div>
