@@ -18,7 +18,7 @@ p4: ( 14px, 14px, 16px, 18px, 1.4, "medium", ), );
 
 $headersFluids: (
   /*name :  fontsize, lineheight */ 
-  12: (12px, 16px, 0.3),
+  12: (12px, 1px, 0.3),
   24: (14px, 24px, 1.2),
   32: (16px, 32px, 1.2),
   18: (18px, 24px, 1),
@@ -264,13 +264,13 @@ $container: 992px;
 
 // massimodutti color MD 2022
 $c-white: #ffffff;
-$c-black: #000000;
+$c-black: #171a22;
 
 $c-dark-grey: #8e8e8e;
 $c-middle-grey: #e3e3e3;
-$c-light-grey: #f0f0f0;
+$c-light-grey: #ebecf5;
 
-$c-primary: #111314;
+$c-primary: #0E0E11;
 $c-error: #b40016;
 $c-info: #1a32a4;
 

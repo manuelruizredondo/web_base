@@ -7,7 +7,7 @@ const select = (e) => document.querySelector(e);
 const selectAll = (e) => document.querySelectorAll(e);
 
 
-let colors = ["black", "black", "blue", "gray", "black", "gray"];
+let colors = ["#0E0E11", "yellow", "blue", "gray", "purple", "gray"];
 let ciclo = true;
 
 
@@ -243,7 +243,7 @@ function changeBackgroundColorOnScrollEnter() {
         switch (value) {
           case "pageColor":
             // get color code from data-scroll-id  assigned to body by obj.id
-            gsap.to(".container-color", { backgroundColor: colors[primero] });
+            gsap.to(".container-color", { backgroundColor: '#'+primero});
             if (segundo === "darkmode") {
               document.body.classList.remove("lightmode");
               document.body.classList.add("darkmode");

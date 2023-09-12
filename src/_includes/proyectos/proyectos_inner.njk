@@ -1,49 +1,64 @@
 ---
-layout: base.njk
+layout: base_inner.njk
+page_title: about
 ---
-<article class="main-article  ">
-  {% set next = collections.blog | nextInCollection(page.fileSlug) %}
-  {% set previous = collections.blog | prevInCollection(page.fileSlug) %}
+{% set next = collections.blog | nextInCollection(page.fileSlug) %}
+{% set previous = collections.blog | prevInCollection(page.fileSlug) %}
 
 
-  <div class="bg-dark has-light">
-    
-    {% include 'hero.njk' %}</div>
-
-
-  <div class="container-fluid pt-32 bg-white">
-
-
-
-        <div class="container-2">
-          <div class="innermarkdown">
-     
-                {{ content | toc | safe }}
- 
-            {{ content | safe }}
-          </div>
-        </div>
-
-
-
-  </div>
-  <div class="container-fluid l-top bg-white">
+{% include "hero.njk" %}
+<section data-scroll class="section bg-light front-section">
+  <div class="row mb-32">
     <div class="col-xs-12">
-  {% if next or previous%}
-  <div class="pagination">
-    {% if previous %}
-    <a href="{{ previous.url }} " class="pagination-item pagination-item-prev">
-   Previous post
-     </a>
-    {% endif %}
-    {% if next %}
-    <a href="{{ next.url }}" class="pagination-item pagination-item-next">
- Next post
-  </a>
-    {% endif %}
-  </div>
-  {% endif %}
+      <div class="text-block">
+        <div class="fluid-48-b ">{{title1}} </div>
+        <div class="p1">
+{{description1}}
+        </div>
+      </div>
     </div>
   </div>
-  {% include "banner.njk" %}
-</article>
+  <div class="row ">
+    <div class="col-xs-12">
+      <div class="rat-2-1">
+        <div class="rat-content">
+          <img src="{{image1}} " alt="Image description">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section data-scroll id="pin">
+  <div class=" section  bg-light">
+    <div class="row ">
+      <div class="col-xs-6">
+        <div data-scroll data-scroll-sticky data-scroll-target="#pin" data-scroll-speed="3">
+          <div class=" text-block   ">
+            <div class="fluid-48-b pb-40 "> {{title2}}</div>
+            <div class="p1 ">{{description2}} </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 "> <img src=" {{imagelong}}" alt=""> </div>
+    </div>
+  </div>
+</section>
+<section data-scroll class="front-section">
+  <div class="container-bleed has-light">
+    <div class="row ">
+      <div class="col-xs-12">
+                    <img width="100%" src="{{image1}} " alt="{{image1}}">
+
+      </div>
+    </div>
+  </div>
+</section>
+<section data-scroll class="height-lg bg-light section  front-section ">
+  <div class="container-bleed   height-sm">
+    <div class="row vertical-reveal-outer ">
+      <div class="text-block-center vertical-reveal-inner">
+        <div class="fluid-48-b ">{{description3}} </div>
+      </div>
+    </div>
+  </div>
+</section>
