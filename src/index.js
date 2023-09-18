@@ -111,6 +111,12 @@ function initPageTransitions() {
     ScrollTrigger.addEventListener("refresh", () => scroll.update());
     ScrollTrigger.refresh();
   }
+
+
+
+  menus();
+
+
 }
 function pageTransition() {
   var tl = gsap.timeline();
@@ -140,6 +146,7 @@ function initbg() {
 function initPage() {
   cursor();
   initbg();
+  menus();
 }
 function cursor() {
   var cursor = document.querySelector(".cursor");
@@ -256,4 +263,43 @@ function changeBackgroundColorOnScrollEnter() {
       }
     });
   }, 100); // delay in milliseconds (100 = 0,1 seconds)
+}
+
+function menus() {
+
+
+const cambiarTextoBoton1 = document.getElementById("cambiarTextoBoton1");
+const cambiarTextoBoton2 = document.getElementById("cambiarTextoBoton2");
+const cambiarTextoBoton3 = document.getElementById("cambiarTextoBoton3");
+const cambiarTextoBoton4 = document.getElementById("cambiarTextoBoton4");
+const cambiarTextoBoton5 = document.getElementById("cambiarTextoBoton5");
+
+
+const miParrafo = document.getElementById("miParrafo");
+
+
+// Agrega un evento de clic al botón
+cambiarTextoBoton1.addEventListener("click", function() {
+miParrafo.textContent = "Home";
+});
+
+cambiarTextoBoton2.addEventListener("click", function() {
+miParrafo.textContent = "About";
+});
+
+cambiarTextoBoton3.addEventListener("click", function() {
+miParrafo.textContent = "Proyectos";
+});
+
+cambiarTextoBoton4.addEventListener("click", function() {
+miParrafo.textContent = "Blog";
+});
+
+cambiarTextoBoton5.addEventListener("click", function() {
+miParrafo.textContent = "Contacta";
+});
+
+
+
+console.log("no entraaaaaaaaaaaaaaa" + miParrafo.textContent)
 }

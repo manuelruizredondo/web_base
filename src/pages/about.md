@@ -1,9 +1,16 @@
 ---
 layout: /paginas/about.njk
 permalink: /about/
+title: About Us
+subtitle: There’s more to us than just creating beautiful designs.
+descripcion: websiteabout
 
-image: https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
 
-title: ABOUT
+
+imagemini: /assets/static/proyectos/audi/audimini.jpg
+imagelong: /assets/static/proyectos/audi/audilong.jpg
+image1: /assets/static/proyectos/audi/audi1.jpg
+image2: /assets/static/proyectos/audi/audi2.jpg
+
 
 ---

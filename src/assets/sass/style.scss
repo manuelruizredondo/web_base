@@ -172,6 +172,12 @@ header {
   height: 100%;
   z-index: 1000;
   overflow: hidden;
+
+  display: flex;
+  align-content: center;
+  align-items: center;
+
+
 }
 .bg {
   position: absolute;
@@ -234,11 +240,6 @@ header {
 .menu-desktop{
   color: white;
 }
-footer{
-  position: relative;
-  z-index: 9;
-
-}
 
 
 .container {
@@ -267,4 +268,55 @@ footer{
     width: 100%;
     max-width: 100%;
   }
+}
+
+
+
+.container-hero {
+  padding: 0em 2.5em 4em 2.5em;
+
+  margin-right: 0;
+  margin-left: 0;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+
+  @media (min-width: $break-sm) {
+    padding-right: 12em;
+    padding-left: 12em;
+    width: 100%;
+    max-width: 100%;
+
+  }
+
+  @media (min-width: $break-md) {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  @media (min-width: $break-lg) {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+
+.height-full-rd {
+  min-height: auto;
+
+
+  @media (min-width: $break-md) {
+    min-height: 100vh;
+  }
+}
+
+
+.fluid-300-b{
+  letter-spacing: -31px;
+ }
+.loading-screen{
+    h2{
+      filter: invert(1);
+      opacity: 0.2;
+    }
 }

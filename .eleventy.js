@@ -25,6 +25,9 @@ const mdAnchorOpts = {
 module.exports = function (eleventyConfig) {
 
   eleventyConfig.addGlobalData("miVariableGlobal", "valorInicial");
+  eleventyConfig.setBrowserSyncConfig({
+    open: true, // Abre el navegador automáticamente al iniciar
+  });
 
 
   eleventyConfig.addPassthroughCopy("./src/css/style.css");

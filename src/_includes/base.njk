@@ -43,22 +43,20 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id= {{global.tag_manager}}" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-
-
-
   <div class="load-container">
-    <div class="loading-screen">    <h2 class="fluid-160-b mb-32"> {{page_title}} <br> </h2>     </div>
+    <div class="loading-screen"> 
+      
+            
+       <h2 class="fluid-300-b mb-32  "   id="miParrafo"  >  </h2>      
+         </div>
   </div>
 
   <div data-barba="container" data-barba-namespace="home" class="is-home ">
     {% include 'header.njk' %}
-
     <div class="cursor"></div>
     <div class="cursor-follow"></div>
         <div class="bg"> </div>
     <div data-scroll-container>
-
-
       <main class="container-color">{{ content | safe }}</main>
       {% include 'footer.njk' %}
     </div>
@@ -86,6 +84,9 @@
         .then(() => console.log("Form successfully submitted"))
         .catch((error) => alert(error));
     };
+
+
+
   </script>
 </body>
 </html>
