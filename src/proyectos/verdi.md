@@ -1,16 +1,16 @@
 ---
 layout: proyectos/proyectos_inner.njk
-permalink: /proyectos/lifeswap
+permalink: /proyectos/verdi
 tags: ["proyectos"]
 
-imagemini: lifeswap.jpg
+imagemini: verdi.jpg
 
 
 
-colors: 444444 darkmode
+colors: 999999 darkmode
 
 
-title: Lifeswap
+title: verdi
 descripcion: website
 client: Audi
 date: 2021-05-01

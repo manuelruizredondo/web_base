@@ -1,16 +1,16 @@
 ---
 layout: proyectos/proyectos_inner.njk
-permalink: /proyectos/lifeswap
+permalink: /proyectos/zscooter
 tags: ["proyectos"]
 
-imagemini: lifeswap.jpg
+imagemini: zscooter.jpg
 
 
 
-colors: 444444 darkmode
+colors: 000000 darkmode
 
 
-title: Lifeswap
+title: zscooter
 descripcion: website
 client: Audi
 date: 2021-05-01

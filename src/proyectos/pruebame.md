@@ -1,16 +1,16 @@
 ---
 layout: proyectos/proyectos_inner.njk
-permalink: /proyectos/lifeswap
+permalink: /proyectos/pruebame
 tags: ["proyectos"]
 
-imagemini: lifeswap.jpg
+imagemini: pruebame.jpg
 
 
 
-colors: 444444 darkmode
+colors: 777777 darkmode
 
 
-title: Lifeswap
+title: pruebame
 descripcion: website
 client: Audi
 date: 2021-05-01

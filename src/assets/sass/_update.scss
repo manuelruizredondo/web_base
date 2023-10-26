@@ -1,0 +1,150 @@
+
+
+$padding-top: (
+  ptr-120: (
+    64px,
+    64px,
+    120px,
+    120px,
+  ),
+  ptr-128: (
+    64px,
+    64px,
+    128px,
+    128px,
+  ),
+) ;
+$pb: 'padding-bottom';
+$padding-bottom: (
+  pbr-128: (
+    64px,
+    64px,
+    128px,
+    128px,
+  ),
+) ;
+$margin-bottom: (
+  mbr-24: (
+    16px,
+    24px,
+    24px,
+    24px,
+  ),
+  mbr-32: (
+    24px,
+    32px,
+    32px,
+    32px,
+  ),
+  mbr-64: (
+    32px,
+    64px,
+    64px,
+    64px,
+  ),
+  mbr-128: (
+    64px,
+    128px,
+    128px,
+    128px,
+  )
+) ;
+
+
+@include space($breakpoints, $padding-top, $pt);
+@include space($breakpoints, $padding-left, $pl);
+@include space($breakpoints, $padding-bottom, $pb);
+@include space($breakpoints, $padding-right, $pr);
+
+@include space($breakpoints, $margin-bottom, $mb);
+
+
+
+.height-xs {
+  min-height: 80px;
+}
+@media (min-width: 768px) {
+  .height-xs {
+    min-height: 80px;
+  }
+}
+.height-sm {
+  min-height: 100px;
+}
+@media (min-width: 768px) {
+  .height-sm {
+    min-height: 100px;
+  }
+}
+.height-128 {
+  min-height: 128px;
+}
+@media (min-width: 768px) {
+  .height-128 {
+    min-height: 128px;
+  }
+}
+.height-md {
+  min-height: 350px;
+}
+@media (min-width: 768px) {
+  .height-md {
+    min-height: 350px;
+  }
+}
+.height-lg {
+  min-height: 400px;
+}
+@media (min-width: 768px) {
+  .height-lg {
+    min-height: 400px;
+  }
+}
+.height-xl {
+  min-height: 450px;
+}
+@media (min-width: 768px) {
+  .height-xl {
+    min-height: 450px;
+  }
+}
+.height-full {
+  min-height: 100vh;
+}
+@media (min-width: 768px) {
+  .height-full {
+    min-height: 100vh;
+  }
+}
+.height-big {
+  min-height: 300px;
+}
+@media (min-width: 768px) {
+  .height-big {
+    min-height: 500px;
+  }
+}
+.height-medium {
+  min-height: 200px;
+}
+@media (min-width: 768px) {
+  .height-medium {
+    min-height: 400px;
+  }
+}
+.height-mini {
+  min-height: 100px;
+}
+@media (min-width: 768px) {
+  .height-mini {
+    min-height: 300px;
+  }
+}
+.height-home {
+  min-height: calc(100vh - 80px);
+}
+@media (min-width: 768px) {
+  .height-home {
+    min-height: calc(100vh - 80px);
+  }
+}

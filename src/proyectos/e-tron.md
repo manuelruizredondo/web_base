@@ -1,22 +1,26 @@
 ---
 layout: proyectos/proyectos_inner.njk
 permalink: /proyectos/audi
+tags: ["proyectos"]
 
-imagemini: /assets/static/proyectos/audi/audimini.jpg
-imagelong: /assets/static/proyectos/audi/audilong.jpg
-image1: /assets/static/proyectos/audi/audi1.jpg
-image2: /assets/static/proyectos/audi/audi2.jpg
+imagemini: etron.jpg
 
 
-id: cccccc darkmode
+
+colors: 222222 darkmode
 
 
-title: e-tron
-subtitle: SUBTITLE
+title: E-tron
 descripcion: website
 client: Audi
 date: 2021-05-01
-tags: ["proyectos"]
+
+
+
+
+imagelong: /assets/static/proyectos/audi/audilong.jpg
+image1: /assets/static/proyectos/audi/audi1.jpg
+image2: /assets/static/proyectos/audi/audi2.jpg
 
 title1: Titulo 1
 description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur id perspiciatis, eveniet harum quod quam quae quaerat exercitationem laborum at,

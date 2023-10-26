@@ -112,3 +112,24 @@
 
 
 
+
+{% macro timeline(imagen = '', nombre = '', año = '', especialidad = '' ) %}
+
+
+<div class="column-timeline">
+  
+  <div class="line-w"></div>
+  <div class="column-grid">
+    <div class="column-img-wrap is-flex">
+      <div class="column-img" > <img src="/assets/static/timeline/{{imagen}}.jpg" alt=""> </div>
+      <div>{{nombre}}</div>
+    </div>
+    <div>{{año}}</div>
+    <div>  <div class="tag-btn"> {{especialidad}}  </div> </div>
+  </div>
+</div>
+
+{% endmacro %}
+
+
+

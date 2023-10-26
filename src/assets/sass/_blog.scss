@@ -55,7 +55,7 @@
   h2 {
     margin-top: 24px;
     padding-bottom: 20px;
-    @include fluid-text($min_width, $break-lg, 30px, 80px, 1);
+    font-size: clamp(1.875rem, 0.5357rem + 4vw, 7rem);
     margin-left: -20%;
     width: calc(100% + 40%);
     text-align: center;
@@ -65,7 +65,7 @@
   h3 {
     margin-top: 24px;
     padding-bottom: 20px;
-    @include fluid-text($min_width, $break-lg, 20px, 40px, 1);
+    font-size: clamp(1.875rem, 0.5357rem + 4vw, 7rem);
     line-height: 1;
     @include font-light();
   }
