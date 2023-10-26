@@ -1,37 +1,33 @@
-<article data-scroll data-scroll-offset="50%,50%"  data-scroll-id="{{proyectos.data.id}} darkmode" id="{{proyectos.data.id}}" data-scroll-call="pageColor" class="mbr-64 height-full-2  align-middle is-flex ">
-
-
-    <div class="row w-100   ">
-
-
-      <div class="col-xs-12 col-sm-6   ">
+<article data-scroll data-scroll-offset="50%,50%" data-scroll-id="{{proyectos.data.id}} " id="{{proyectos.data.id}}" 
+  data-scroll-call="pageColor" class="mbr-64 height-full-2  align-middle is-flex "  data-scroll-class="opened" data-scroll-repeat="false">
+  <div class="row w-100   ">
+    <div class="col-xs-12 col-sm-3   ">
+      <div data-scroll data-scroll-speed="2" class="front-section">
         <div class="fluid-3-l ">
           {{proyectos.data.prename}}
         </div>
-        <div class="mb-16 ">
+        <div class="mb-16  front-section ">
           <a href="{{ proyectos.url }}">
             <div class="num"> 0{{proyectos.data.id}}</div>
-            <div class="fluid-100-b"> {{proyectos.data.title}} </div>
-            <div class="fluid-24-l mbr-32">{{proyectos.data.descripcion}} </div>
-            <div class="fluid-12-r"> Client: {{proyectos.data.descripcion}} </div>
+            <div class="fluid-3-b no-wrap"> {{proyectos.data.title}} </div>
+            <div class="fluid-8-l mbr-32">{{proyectos.data.descripcion}} </div>
+            <div class="fluid-10-r"> Client: {{proyectos.data.descripcion}} </div>
         </div>
         </a>
         <div class="mb-24">
-          <a class="link-line" href="{{ proyectos.url }}">Ver PROYECTO </a>
-        </div>
-      </div>
-
-
-
-
-    <div class="col-xs-12  col-sm-6  pb-40">
-      <div class="rat-16-9">
-        <div class="rat-content">
-          <img class=" video-cover" data-rellax-percentage="0.5" data-rellax-speed="1" src="{{proyectos.data.imagemini}} "
-            alt="">
+          <a class="link-line " href="{{ proyectos.url }}">Ver PROYECTO </a>
         </div>
       </div>
     </div>
-
+    <div class="col-xs-12  col-sm-9  pb-40">
+      <div data-scroll="" data-scroll-offset="50%,50%" data-scroll-speed="0.2" class="rat-16-9">
+        <div class="rat-content">
+          <div class="img-wrap">
+            <div class="img-inner" style="background-image: url('{{proyectos.data.imagemini}}');">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </article>

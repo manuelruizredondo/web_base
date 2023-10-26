@@ -4,10 +4,13 @@ page_title: proyectoss
 image: https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
 ---
 
-<div class="section  ">
-  <div class="bg-dark has-light">{% include 'hero.njk' %}</div>
 
-    <div class="bg-white front-section">
+<div class="bg-dark has-light">{% include 'componentes/hero.njk' %}</div>
+
+<div class="section  ">
+
+
+    <div class="">
       <div class="container pt-64 pb-64  ">
         <ul role="list" class="list-clear flow">
           {%- for proyectos in collections.proyectos -%}
@@ -21,4 +24,4 @@ image: https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=c
 
 </div>
 
-{% include "banner.njk" %}
+{% include "componentes/banner.njk" %}

@@ -47,18 +47,18 @@
     <div class="loading-screen"> 
       
             
-       <h2 class="fluid-300-b mb-32  "   id="miParrafo"  >  </h2>      
+       <h2 class="fluid-1-b mb-32  "   id="miParrafo"  >  </h2>      
          </div>
   </div>
 
   <div data-barba="container" data-barba-namespace="home" class="is-home ">
-    {% include 'header.njk' %}
+    {% include 'componentes/header.njk' %}
     <div class="cursor"></div>
     <div class="cursor-follow"></div>
         <div class="bg"> </div>
     <div data-scroll-container>
       <main class="container-color">{{ content | safe }}</main>
-      {% include 'footer.njk' %}
+      {% include 'componentes/footer.njk' %}
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -68,22 +68,8 @@
   <script src=" https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js "></script>
   <script src="   https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js "></script>
   <script src=" https://cdn.jsdelivr.net/npm/@barba/core@2.9.7/dist/barba.umd.min.js "></script>
-  <script type="module" src="/index.js"></script>
-  <script>
-    const handleSubmit = (event) => {
-      event.preventDefault();
-      const myForm = event.target;
-      const formData = new FormData(myForm);
-      fetch("/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: new URLSearchParams(formData).toString()
-      })
-        .then(() => console.log("Form successfully submitted"))
-        .catch((error) => alert(error));
-    };
+  <script type="module" src="/assets/js/index.js"></script> 
+  <script type="module" src="/assets/js/form.js"></script>
 
 
 

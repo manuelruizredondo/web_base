@@ -8,7 +8,8 @@ image1: /assets/static/proyectos/audi/audi1.jpg
 image2: /assets/static/proyectos/audi/audi2.jpg
 
 
-id: ff0000
+id: cccccc darkmode
+
 
 title: e-tron
 subtitle: SUBTITLE

@@ -35,7 +35,21 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/pages", "pages");
   eleventyConfig.addPassthroughCopy("src/site.webmanifest");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
-  eleventyConfig.addPassthroughCopy("src/index.js");
+
+
+
+
+  eleventyConfig.addPairedShortcode("myShortcode", function (content) {
+    // Method A: ✅ ideal para encapsular {% myShortcode %}  dfdfdf  {% endmyShortcode %}
+    return `<div class="is-flex full-container-blog content-center">${content}</div>`;
+  });
+  eleventyConfig.addShortcode("br", function () {
+    // Method A: ✅ ideal para tags de espacios {% br %}
+    return `
+  <br><br><br>
+`;
+  });
+
 
   eleventyConfig.addPlugin(embeds);
 

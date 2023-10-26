@@ -9,66 +9,110 @@ eleventyComputed:
   metaKeywords: "key"
   metaRobots: "index, follow"
 ---
-
-<section class=" slide-section " data-scroll-offset="50%,50%" data-scroll data-scroll-call="pageColor" data-scroll-id="0 darkmode">
+{% import "_insert.njk" as insert %}
+<section class=" slide-section " data-scroll-offset="50%,50%" data-scroll data-scroll-call="pageColor"
+  data-scroll-id="0 darkmode">
   <div class="container">
     <div class="row">
-      <div class="col-xs-6 has-light">
+      <div class="col-xs-8 has-light front-section">
         <div data-scroll data-scroll-speed="2" class="height-full is-flex flex-column content-center ">
-          <h1 class="fluid-160-b">
-            Digital
-            Strategy
-  
+          <h1 class="fluid-2-b">
+            <div class="outtext-1">
+              <div class="intext">Digital</div>
+            </div>
+            <div class="outtext-2">
+              <div class="intext">Strategy</div>
+            </div>
           </h1>
-          <h1 class="fluid-48-b">
-            Ayudamos a las marcas con diseños
-            convincentes y <b> persuasivos</b>.
+          <h1 class="fluid-4-b">
+            {% call insert.splitenpalabras('Nuestra historia tiene raíces en la **creatividad,  pero nuestro ADN es
+            100% digital.') %} {% endcall %}
           </h1>
         </div>
       </div>
-      <div data-scroll data-scroll-offset="50%,50%" data-scroll-speed="0.2" class="col-xs-6">
+      <div data-scroll data-scroll-offset="50%,50%" data-scroll-speed="0.2" class="col-xs-4 image-digital">
         <img src="https://digitalstrategy.netlify.app/assets/images/solo2.png" alt="">
       </div>
     </div>
   </div>
 </section>
-<section data-scroll data-scroll-offset="50%,50%" data-scroll-class="opened" data-scroll-call="pageColor"
-  data-scroll-id="0E0E11 darkmode" class=" has-light  front-section ptr-120 pbr-120">
+<section class=" has-light  front-section pt-big pb-big" data-scroll-id="0E0E11 darkmode" data-scroll
+  data-scroll-offset="50%,50%" data-scroll-call="pageColor">
   <div class="container">
     <div class="row">
       <div class="col-xs-6">
-        <div data-scroll data-scroll-speed="2" class="fluid-48-b">
-          No hacemos webs, <br>
-          creamos estrategias
+        <div data-scroll data-scroll-speed="2" class="fluid-4-b" data-scroll-class="opened">
+          <div class="out-">
+            <div class="in-">No hacemos webs, <br></div>
+          </div>
+          <div class="out-">
+            <div class="in-">creamos <b>estrategias</b> </div>
+          </div>
+          <div class="fluid-8-l mt-32 out-">
+            <div class="in-">
+              Desarrollando estrategias desde el 2001, hemos tenido el privilegio de trabajar con más de 500 clientes en
+              todo el mundo, incluidas start ups, pymes, grandes corporaciones y organizaciones gubernamentales . Con
+              nuestra experiencia en la comprensión de la dinámica de la industria y la mentalidad de la audiencia
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-6">
-        <div data-scroll data-scroll-speed="2" class="fluid-32-l">
-          Desarrollando estrategias desde el 2001, hemos tenido el privilegio de trabajar con más de 500 clientes en
-          todo el mundo, incluidas start ups, pymes, grandes corporaciones y organizaciones gubernamentales . Con
-          nuestra experiencia en la comprensión de la dinámica de la industria y la mentalidad de la audiencia
-        </div>
       </div>
     </div>
   </div>
 </section>
-<section data-scroll data-scroll-offset="50%,50%" data-scroll-id="2 darkmode" data-scroll-call="pageColor" data-scroll-speed="2">
+<section data-scroll-id="0 darkmode" data-scroll data-scroll-offset="50%,50%" data-scroll-call="pageColor"
+  data-scroll-speed="2" data-scroll-class="opened" data-scroll-repeat="false">
   <div class="container">
-    <div class="row" >
+    <div class="row">
       <div class="col-xs-12  col-sm-6">
-        <div class="fluid-100-b pt-big pb-big">
-          Nuestros
-          Proyectos
+        <div class="fluid-3-b pt-big pb-big has-light">
+          <div class="out-">
+            <div class="in-">Clientes<br></div>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section>
+<section data-scroll-id="1 darkmode" data-scroll data-scroll-offset="50%,50%" data-scroll-call="pageColor"
+  data-scroll-speed="2" data-scroll-class="opened" data-scroll-repeat="false">
   <div class="container">
+    <div class="client-zone">
+      {% for i in range(16) %}
+      <figure>
+        <div class="imglogo"><img src="/assets/static/logos/logo-{{ i + 1 }}.svg " alt=""></div>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+<section data-scroll-id="2 darkmode" data-scroll data-scroll-offset="50%,50%" data-scroll-call="pageColor"
+  data-scroll-speed="2" data-scroll-class="opened" data-scroll-repeat="false">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12  col-sm-6">
+        <div class="fluid-3-b pt-big pb-big has-light">
+          <div class="out-">
+            <div class="in-">Nuestros<br></div>
+          </div>
+          <div class="out-">
+            <div class="in- pb-64">Proyectos </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container-proyecto">
     <div class="row">
       <div class="col-xs-12">
         <div role="list" class="list-clear flow ">
@@ -87,8 +131,8 @@ eleventyComputed:
           src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
           alt=""> </div>
       <div class="panel-text">
-        <div data-scroll data-scroll-speed="2" class="fluid-48-b"> No hacemos webs </div>
-        <div data-scroll data-scroll-speed="2" class="fluid-12-r"> No hacemos webs </div>
+        <div data-scroll data-scroll-speed="2" class="fluid-4-b"> No hacemos webs </div>
+        <div data-scroll data-scroll-speed="2" class="fluid-10-r"> No hacemos webs </div>
       </div>
     </div>
     <div class="panel">
@@ -96,8 +140,8 @@ eleventyComputed:
           src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
           alt=""> </div>
       <div class="panel-text">
-        <div data-scroll data-scroll-speed="2" class="fluid-48-b mb-32"> No hacemos webs </div>
-        <div data-scroll data-scroll-speed="2" class="fluid-12-r"> No hacemos webs </div>
+        <div data-scroll data-scroll-speed="2" class="fluid-4-b mb-32"> No hacemos webs </div>
+        <div data-scroll data-scroll-speed="2" class="fluid-10-r"> No hacemos webs </div>
       </div>
     </div>
     <div class="panel">
@@ -105,8 +149,8 @@ eleventyComputed:
           src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
           alt=""> </div>
       <div class="panel-text">
-        <div data-scroll data-scroll-speed="2" class="fluid-48-b mb-32"> No hacemos webs </div>
-        <div data-scroll data-scroll-speed="2" class="fluid-12-r"> No hacemos webs </div>
+        <div data-scroll data-scroll-speed="2" class="fluid-4-b mb-32"> No hacemos webs </div>
+        <div data-scroll data-scroll-speed="2" class="fluid-10-r"> No hacemos webs </div>
       </div>
     </div>
     <div class="panel">
@@ -114,8 +158,8 @@ eleventyComputed:
           src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
           alt=""> </div>
       <div class="panel-text">
-        <div data-scroll data-scroll-speed="2" class="fluid-48-b mb-32"> No hacemos webs </div>
-        <div data-scroll data-scroll-speed="2" class="fluid-12-r"> No hacemos webs </div>
+        <div data-scroll data-scroll-speed="2" class="fluid-4-b mb-32"> No hacemos webs </div>
+        <div data-scroll data-scroll-speed="2" class="fluid-10-r"> No hacemos webs </div>
       </div>
     </div>
     <div class="panel">
@@ -123,8 +167,8 @@ eleventyComputed:
           src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
           alt=""> </div>
       <div class="panel-text">
-        <div data-scroll data-scroll-speed="2" class="fluid-48-b mb-32"> No hacemos webs </div>
-        <div data-scroll data-scroll-speed="2" class="fluid-12-r"> No hacemos webs </div>
+        <div data-scroll data-scroll-speed="2" class="fluid-4-b mb-32"> No hacemos webs </div>
+        <div data-scroll data-scroll-speed="2" class="fluid-10-r"> No hacemos webs </div>
       </div>
     </div>
   </div>

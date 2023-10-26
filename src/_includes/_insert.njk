@@ -1,0 +1,114 @@
+{% macro comentario(empresa = '', texto = '', fecha = '',img = '') %}
+
+
+<div class="google-comment">
+  <div class="google-bubble mb-16">
+    <div class="is-flex w-100 content-sp-between mb-16">
+      <div class="google-stars">
+        <img width="17px" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="">
+        <img width="17px" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="">
+        <img width="17px" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="">
+        <img width="17px" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="">
+      </div>
+      <div class="google-logo"> <img width="20px"
+          src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt=""></div>
+    </div>
+    <div class="google-text p3 c-black"> 
+
+      {{ texto }}
+
+    </div>
+    <div class="google-seemore p3"> Leer más</div>
+  </div>
+  <div class="is-flex">
+    <div class="pr-16"> <img width="40px"
+        src="https://lh3.googleusercontent.com/a/{{img}}"
+        alt=""></div>
+    <div class="bold">
+      {{ empresa }}  <br>
+      <span class="p3">       {{ fecha }}   </span>
+    </div>
+  </div>
+</div>
+
+
+{% endmacro %}
+
+
+{% macro team(foto = '', nombre = '', texto = '') %}
+
+        <div class="card-2">
+          <div class="rat-1-1 mb-24">
+            <div class="rat-content">
+              <img src="/assets/static/colaboradores/{{foto}}.jpg" alt="">
+            </div>
+          </div>
+          <div class="fluid-9-b c-primary  p-16">
+     {{nombre}}
+          </div>
+          <div class="p3 p-16 card-2-text">
+            {{texto}}
+          </div>
+        </div>
+
+
+{% endmacro %}
+
+
+
+{% macro splitenpalabras(frase = '') %}
+
+  {% set palabras = frase.split(" ") %}
+  
+  <span>
+    {% for palabra in palabras %}
+    {% if palabra.startsWith('**') %}
+    <span class="word bold">{{ palabra | replace('**', '') }}</span>
+    {% elseif palabra == '--' %}
+
+    {{ palabra | replace('--', '<br>') | safe }}
+
+
+      {% else %}
+        <span class="word">{{ palabra }}</span>
+      {% endif %}
+    {% endfor %}
+  </span>
+{% endmacro %}
+
+
+
+{% macro faqs(faqs1 = '', faqs2='') %}
+
+<div class="accordion">
+  <div class="accordion-inner">
+    <div class="accordion-header is-flex">
+      <div class="fluid-8-r mt-4">
+        
+        {{ faqs1 }} 
+      
+      </div>
+      <div class="list-circle ml-24">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <title>down-arrow</title>
+          <g stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" fill="none" stroke="#212121"
+            stroke-miterlimit="10">
+            <polyline points="2,7 12,17 22,7 " transform="translate(0, 0)"></polyline>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="accordion-content">
+      <div class="text-14-r mt-16">
+        {{ faqs2 }} 
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endmacro %}
+
+
+

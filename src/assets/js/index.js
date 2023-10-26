@@ -44,6 +44,7 @@ function initPageTransitions() {
           // do something once on the initial page load
           initSmoothScroll(data.next.container);
           initPage();
+
         },
         async leave(data) {
           const done = this.async();
@@ -79,6 +80,22 @@ function initPageTransitions() {
         smooth: true,
       },
     });
+    
+    ScrollTrigger.create({
+      trigger: container, // Elemento que disparará el trigger
+      start: "top top+=300", // Inicia el trigger 300 píxeles desde la parte superior
+      end: "bottom top", // Finaliza el trigger en la parte superior del contenedor
+      onEnter: () => {
+        document.body.classList.add("mi-clase"); // Agrega la clase al body
+      },
+      onLeaveBack: () => {
+        document.body.classList.remove("mi-clase"); // Elimina la clase del body al hacer scroll hacia atrás
+      },
+    });
+  
+
+
+
     ScrollTrigger.scrollerProxy("[data-scroll-container]", {
       scrollTop(value) {
         return arguments.length
@@ -106,6 +123,11 @@ function initPageTransitions() {
     if (scrollbar.length > 1) {
       scrollbar[0].remove();
     }
+
+
+
+
+
     changeBackgroundColorOnScrollEnter();
     scroll.on("scroll", ScrollTrigger.update);
     ScrollTrigger.addEventListener("refresh", () => scroll.update());
@@ -142,11 +164,19 @@ function initbg() {
   } else {
     gsap.to(".bg", { height: "0", duration: 0.1, ease: Expo.easeInOut });
   }
+
+	gsap.to(".outtext-1 .intext", { delay: 0.2, top: "0", duration: 1, ease: Expo.easeInOut, });
+	gsap.to(".outtext-2 .intext", { delay: 0.4, top: "0", duration: 1, ease: Expo.easeInOut, });
+	gsap.to(".outtext-3 .intext", { delay: 0.5, top: "0", duration: 1, ease: Expo.easeInOut, });
+	gsap.to(".outtext-4 .intext", { delay: 0.6, top: "0", duration: 1, ease: Expo.easeInOut, });
+	gsap.to(".image-digital", { delay: 0.7, opacity: "1", duration: 1, ease: Expo.easeInOut, });
+
 }
 function initPage() {
   cursor();
   initbg();
   menus();
+  menusMobile();
 }
 function cursor() {
   var cursor = document.querySelector(".cursor");
@@ -250,7 +280,7 @@ function changeBackgroundColorOnScrollEnter() {
         switch (value) {
           case "pageColor":
             // get color code from data-scroll-id  assigned to body by obj.id
-            gsap.to(".container-color", { backgroundColor: '#'+primero});
+            gsap.to(".container-color", { backgroundColor: '#'+primero  }   );
             if (segundo === "darkmode") {
               document.body.classList.remove("lightmode");
               document.body.classList.add("darkmode");
@@ -302,4 +332,48 @@ miParrafo.textContent = "Contacta";
 
 
 console.log("no entraaaaaaaaaaaaaaa" + miParrafo.textContent)
+}
+
+
+
+function menusMobile() {
+
+let abierto = false; // Variable para rastrear el estado de la div
+const miDiv = $('#menu-gsap-wrap');
+const menuGsap = $('.menu-gsap');
+
+
+const tlmenu = gsap.timeline({
+  paused: true,
+  
+  onReverseComplete: function () {
+    miDiv.addClass('hidden-menu2');
+    menuGsap.removeClass('menu-open');
+
+    abierto = false;
+  }
+});
+
+tlmenu
+  .to(miDiv, { duration: 0.2, left: '0%', ease: 'cubic-bezier(0.47, 0, 0.745, 0.715)' })
+  .to({}, { duration: 0.5 }) // Añade un retraso de 0.5 segundos
+
+  .staggerFromTo('nav li', 0.6, { x: -50, opacity: 0 }, { x: 0, opacity: 1, ease: Back.easeOut }, 0.1);
+
+
+
+$('.openButton').click(function() {
+  if (abierto) {
+
+    tlmenu.reverse(0);
+      
+  } else {
+    miDiv.removeClass('hidden-menu2');
+
+    tlmenu.play(0);
+    abierto = true;
+    menuGsap.addClass('menu-open');
+  }
+});
+
 }
