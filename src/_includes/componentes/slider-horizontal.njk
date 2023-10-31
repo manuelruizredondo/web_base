@@ -1,0 +1,22 @@
+{% import "../_insert.njk" as insert %}
+
+<div class="especial">
+  <section id="sectionPin" data-scroll data-scroll-offset="50%,50%" data-scroll-id="0f0f0f darkmode" data-scroll-call="pageColor"  >
+
+    
+  
+    <div class="pin-wrap">
+  
+      {% set counterline = 1 %}
+  
+      {% for experiment in collections.experiment %}
+      {% include 'proyectos/inline-loop.njk' %}
+      {% set counterline = counterline + 1 %}
+      {% endfor %}
+  
+  
+  
+  
+    </div>
+  </section>
+</div>

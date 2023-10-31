@@ -1,16 +1,15 @@
 ---
 layout: proyectos/proyectos_inner.njk
-permalink: /proyectos/pruebame
+permalink: /proyectos/audi
 tags: ["proyectos"]
 
-imagemini: pruebame.jpg
+imagemini: etron.jpg
 
 
+colors: 000000 darkmode
 
-colors: 777777 darkmode
 
-
-title: pruebame
+title: E-tron
 descripcion: website
 client: Audi
 date: 2021-05-01

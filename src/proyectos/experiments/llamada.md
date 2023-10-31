@@ -1,21 +1,21 @@
 ---
 layout: proyectos/proyectos_inner.njk
-permalink: /proyectos/creativehub
-tags: ["proyectos"]
+permalink: /proyectos/llamada
+tags: ["experiment"]
 
-imagemini: creativehub.jpg
-
-
-
-id: 56454c darkmode
+imagemini: llamada.jpg
 
 
-title: creative hub
-descripcion: website
+
+colors: 555555 darkmode
+
+
+title: La llamada mágica
+type: website, Venta , Marketing
 client: Audi
-date: 2021-05-01
-
-
+description: Llevamos una experiencia a los niños que se quedan sin navidad.
+año: 2021
+img: llamadamini.jpg
 
 
 imagelong: /assets/static/proyectos/audi/audilong.jpg

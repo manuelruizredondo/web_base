@@ -1,16 +1,16 @@
 ---
 layout: proyectos/proyectos_inner.njk
-permalink: /proyectos/mentos
+permalink: /proyectos/pruebame
 tags: ["proyectos"]
 
-imagemini: mentos.jpg
+imagemini: pruebame.jpg
 
 
 
-colors: 666666 darkmode
+colors: 047fff darkmode
 
 
-title: mentos
+title: pruebame
 descripcion: website
 client: Audi
 date: 2021-05-01

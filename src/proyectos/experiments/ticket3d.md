@@ -1,20 +1,21 @@
 ---
 layout: proyectos/proyectos_inner.njk
-permalink: /proyectos/kivnon
-tags: ["proyectos"]
+permalink: /proyectos/ticket3d
+tags: ["experiment"]
 
-imagemini: kivnon.jpg
-
-
-
-colors: 333333 darkmode
+imagemini: ticket3d.jpg
 
 
-title: kivnon
-descripcion: website
+
+colors: 888888 darkmode
+
+
+title: Ticket 3d
+type: website, dpoidfjs ,odsfjosj
 client: Audi
-date: 2021-05-01
-
+description: odfjfdoijdfofj
+año: 2021
+img: ticketmini.jpg
 
 
 

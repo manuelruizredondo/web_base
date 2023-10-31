@@ -1,16 +1,16 @@
 ---
 layout: proyectos/proyectos_inner.njk
-permalink: /proyectos/llamada
+permalink: /proyectos/mentos
 tags: ["proyectos"]
 
-imagemini: llamada.jpg
+imagemini: mentos.jpg
 
 
 
-colors: 555555 darkmode
+colors: ddeff9 lightmode
 
 
-title: llamada
+title: mentos
 descripcion: website
 client: Audi
 date: 2021-05-01

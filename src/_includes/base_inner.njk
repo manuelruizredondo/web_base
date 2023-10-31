@@ -55,8 +55,9 @@
   <div data-barba="container" data-barba-namespace="interior" class="is-interior">
     {% include 'componentes/header.njk' %}
 
-    <div class="cursor"></div>
-    <div class="cursor-follow"></div>
+    <div class="cursor">   </div>
+    <div class="cursor-follow">     <img src="" alt="Cursor Image" id="image-to-load">
+    </div>
     <div  data-scroll-container>
 
         {{ content | safe }}

@@ -1,16 +1,16 @@
 ---
 layout: proyectos/proyectos_inner.njk
-permalink: /proyectos/verdi
+permalink: /proyectos/zscooter
 tags: ["proyectos"]
 
-imagemini: verdi.jpg
+imagemini: zscooter.jpg
 
 
 
-colors: 999999 darkmode
+colors: fd945e darkmode
 
 
-title: verdi
+title: zscooter
 descripcion: website
 client: Audi
 date: 2021-05-01

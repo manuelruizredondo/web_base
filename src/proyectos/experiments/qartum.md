@@ -1,21 +1,22 @@
 ---
 layout: proyectos/proyectos_inner.njk
-permalink: /proyectos/audi
-tags: ["proyectos"]
+permalink: /proyectos/qartum
+tags: ["experiment"]
 
-imagemini: etron.jpg
-
-
-
-colors: 222222 darkmode
+imagemini: qartum.jpg
 
 
-title: E-tron
-descripcion: website
-client: Audi
-date: 2021-05-01
+
+colors: 888888 darkmode
 
 
+title: qartum
+type: website, Art direction ,Desarrollo
+client: Experiment
+description: Ayudando a la hosteleria en tiempos de covid.
+año: 2020
+
+img: qartummini.jpg
 
 
 imagelong: /assets/static/proyectos/audi/audilong.jpg

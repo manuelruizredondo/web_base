@@ -1,52 +1,125 @@
+
+
 .pin-wrap {
-	height: 500px;
+
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	padding: 0px 20px;
+
 	& > * {
-	  min-width: 100vw;
-	  padding: 0 5vw;
+	  min-width: 80vw;
+	  padding: 0 24px 0 0;
+
+	  @media (min-width: $break-md) {
+		min-width: 70vw;
+		padding: 0 24px 0 0;
+	  }
+
+
 	}
   }
   #sectionPin {
-	height: 100vh;
-	overflow: hidden;
+
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
 	display: flex;
 	z-index: 10;
 	left: 0;
 	color: white;
 	display: flex;
 	align-items: center;
+	padding-bottom: 20px;
+	@media (min-width: $break-md) {
+
+	overflow: hidden;
+		height: 100vh;
+		padding-left: 12em;
+
+	  }
   }
+
+
+
+
 
 
   .panel {
 	position: relative;
 	display: flex;
-	align-items: center;
-	height: 400px;
+	align-items: end;
+
 	img {
 	  height: 100%;
 	}
 
 	.panel-img {
-		width: 50%;
+		width: 60%;
 		position: relative;
 
 	
 	  }
 	.panel-text {
-		width: 50%;
-		padding: 100px;
+		width: 40%;
+		padding: 50px 50px 0 50px;
 		position: relative;
+
+		.panel-info{
+			display: grid;
+			grid-gap: 20px;
+			width: 100%;
+			grid-template-columns: .50fr 1fr .50fr;
+		
+		
+		}
 
 	
 	  }
 
 
+.o-60{
+	opacity: .6;
+}
+@media (max-width: $break-sm) {
+	flex-direction: column;
 
+	.panel-info{
+		display: grid;
+		grid-gap: 20px;
+		width: 100%;
+		grid-template-columns: .50fr 1fr .50fr;
+	
+	
+	}
+
+	.panel-img {
+		width: 100%;
+		position: relative;
+
+	
+	  }
+	.panel-text {
+		width: 100%;
+		padding: 20px 0 0 0;
+		position: relative;
+
+	
+	  }
 
   }
 
+
+  }
+.bg-pin{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	svg{
+		position: absolute;
+		width: 100vw;
+		height: 100%;
+		opacity: .01;
+		top: 0;
+
+	}
+}
 

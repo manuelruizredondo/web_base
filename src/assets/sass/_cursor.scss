@@ -12,6 +12,16 @@
   mix-blend-mode: difference;
   user-select: none;
   pointer-events: none;
+  overflow: hidden;
+
+  img{
+
+    width: 150px;
+    height: 120px;
+
+  }
+
+
 }
 
 .cursor {
@@ -25,3 +35,4 @@
   pointer-events: none;
   transform: scale(1);
 }
+

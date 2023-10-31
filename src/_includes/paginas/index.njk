@@ -10,39 +10,39 @@ eleventyComputed:
   metaRobots: "index, follow"
 ---
 {% import "_insert.njk" as insert %}
-
-<section data-scroll data-scroll-id="0 darkmode" data-scroll-offset="50%,50%"  data-scroll-call="pageColor"   class=" slide-section " >
+<section data-scroll data-scroll-id="0f0f0f darkmode" data-scroll-offset="50%,50%" data-scroll-call="pageColor"
+  class=" slide-section ">
   <div class="container">
     <div class="row">
-      <div class="col-xs-8 has-light front-section">
+      <div class="col-xs-8 col-sm-8 has-light front-section">
         <div data-scroll data-scroll-speed="2" class="height-full is-flex flex-column content-center ">
           <h1 class="fluid-2-b">
             <div class="outtext-1">
               <div class="intext">Digital</div>
             </div>
             <div class="outtext-2">
-              <div class="intext">Strategy</div>
+              <div class="intext">Strategy <div class="boxer"></div>
+              </div>
             </div>
           </h1>
           <h1 class="fluid-4-b">
-            {% call insert.splitenpalabras('Nuestra historia tiene raíces en la **creatividad,  pero nuestro ADN es
-            100% digital.') %} {% endcall %}
+            {% call insert.splitenpalabras('Nuestra historia tiene raíces en la **creatividad, pero nuestro ADN es
+            **100% **digital.') %} {% endcall %}
           </h1>
         </div>
       </div>
-      <div data-scroll data-scroll-offset="50%,50%" data-scroll-speed="0.2" class="col-xs-4 image-digital">
+      <div data-scroll data-scroll-offset="50%,50%" data-scroll-speed="0.2" class="col-xs-6 col-sm-4 image-digital">
         <img src="https://digitalstrategy.netlify.app/assets/images/solo2.png" alt="">
       </div>
     </div>
   </div>
 </section>
-
-
-<section data-scroll  data-scroll-id="0 darkmode"   data-scroll-offset="50%,50%" data-scroll-call="pageColor"  class=" has-light  front-section ptr-128 pbr-128">
+<section data-scroll data-scroll-id="0f0f0f darkmode" data-scroll-offset="50%,50%" data-scroll-call="pageColor"
+  class=" has-light  front-section ptr-64 pbr-64">
   <div class="container">
     <div class="row">
-      <div class="col-xs-6">
-        <div data-scroll data-scroll-speed="2"  data-scroll-class="opened" data-scroll-repeat="false" class="fluid-4-b">
+      <div class="col-xs-10 col-sm-6">
+        <div data-scroll data-scroll-speed="2" data-scroll-class="opened" data-scroll-repeat="false" class="fluid-4-b">
           <div class="out-">
             <div class="in-">No hacemos webs, <br></div>
           </div>
@@ -65,25 +65,22 @@ eleventyComputed:
     </div>
   </div>
 </section>
-
-<section data-scroll data-scroll-id="212121 darkmode"  data-scroll-offset="50%,50%" data-scroll-call="pageColor" data-scroll-speed="2" >
-  <div data-scroll   data-scroll-class="opened" class="container" data-scroll-repeat="false" >
+<section data-scroll data-scroll-id="0f0f0f darkmode" data-scroll-offset="50%,50%" data-scroll-call="pageColor"
+  data-scroll-speed="2">
+  <div data-scroll data-scroll-class="opened" class="container" data-scroll-repeat="false">
     <div class="row">
       <div class="col-xs-12  col-sm-6">
-        <div class="fluid-3-b ptr-128 pbr-128 has-light">
+        <div class="fluid-3-b ptr-64 pbr-64 has-light">
           <div class="out-">
             <div class="in-">Clientes<br></div>
           </div>
-
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<section data-scroll data-scroll-id="212121 darkmode"  data-scroll-class="opened"   data-scroll-offset="50%,50%" data-scroll-call="pageColor" data-scroll-speed="2"  >
-
-  <div   class="container" >
+<section data-scroll data-scroll-id="0f0f0f darkmode" data-scroll-offset="50%,50%" data-scroll-call="pageColor" data-scroll-speed="2" data-scroll-repeat="false">
+  <div class="container" data-scroll  data-scroll-class="opened"  data-scroll-repeat="false"  data-scroll-offset="50%,50%" >
     <div class="client-zone">
       {% for i in range(16) %}
       <figure>
@@ -94,12 +91,30 @@ eleventyComputed:
   </div>
 </section>
 
-
-<section data-scroll  data-scroll-id="2 darkmode" data-scroll-offset="50%,50%" data-scroll-call="pageColor" data-scroll-speed="2"  >
-  <div data-scroll data-scroll-class="opened" data-scroll-repeat="false"  class="container">
+<section data-scroll data-scroll-offset="50%,50%" data-scroll-speed="2">
+  <div data-scroll data-scroll-offset="50%,50%"  data-scroll-class="opened" data-scroll-repeat="false" class="container">
     <div class="row">
       <div class="col-xs-12  col-sm-6">
-        <div class="fluid-3-b ptr-128 pbr-128 has-light">
+        <div class="fluid-3-b ptr-64 pbr-64 has-light">
+          <div class="out-">
+            <div class="in-">Nuestros<br></div>
+          </div>
+          <div class="out-">
+            <div class="in- ">Experimentos </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include 'componentes/slider-horizontal.njk' %}
+
+<section data-scroll data-scroll-offset="50%,50%" data-scroll-speed="2">
+  <div data-scroll data-scroll-class="opened" data-scroll-repeat="false" class="container">
+    <div class="row">
+      <div class="col-xs-12  col-sm-6">
+        <div class="fluid-3-b ptr-64 pbr-64 has-light">
           <div class="out-">
             <div class="in-">Nuestros<br></div>
           </div>
@@ -111,20 +126,15 @@ eleventyComputed:
     </div>
   </div>
 </section>
-
-
-
-<section data-scroll data-scroll-offset="50%,50%"  >
+<section>
   <div class="container-proyecto">
     <div class="row">
       <div class="col-xs-12">
         <div role="list" class="list-clear flow ">
-          {% set counter = 0 %}
+          {% set counter = 1 %}
 
-          {% for proyectos in collections.proyectos %}
-   
-
-          {% include 'proyectos/proyectos-loop.njk'   %}
+          {% for proyectos in collections.proyectos  %}
+          {% include 'proyectos/proyectos-loop.njk' %}
           {% set counter = counter + 1 %}
           {% endfor %}
         </div>
@@ -132,66 +142,12 @@ eleventyComputed:
     </div>
   </div>
 </section>
-
-<section id="sectionPin" data-scroll data-scroll-offset="50%,50%">
-  <div class="pin-wrap">
-    <div class="panel">
-      <div class="panel-img"> <img
-          src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-          alt=""> </div>
-      <div class="panel-text">
-        <div data-scroll data-scroll-speed="2" class="fluid-4-b"> No hacemos webs </div>
-        <div data-scroll data-scroll-speed="2" class="fluid-10-r"> No hacemos webs </div>
-      </div>
-    </div>
-    <div class="panel">
-      <div class="panel-img"> <img
-          src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-          alt=""> </div>
-      <div class="panel-text">
-        <div data-scroll data-scroll-speed="2" class="fluid-4-b mb-32"> No hacemos webs </div>
-        <div data-scroll data-scroll-speed="2" class="fluid-10-r"> No hacemos webs </div>
-      </div>
-    </div>
-    <div class="panel">
-      <div class="panel-img"> <img
-          src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-          alt=""> </div>
-      <div class="panel-text">
-        <div data-scroll data-scroll-speed="2" class="fluid-4-b mb-32"> No hacemos webs </div>
-        <div data-scroll data-scroll-speed="2" class="fluid-10-r"> No hacemos webs </div>
-      </div>
-    </div>
-    <div class="panel">
-      <div class="panel-img"> <img
-          src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-          alt=""> </div>
-      <div class="panel-text">
-        <div data-scroll data-scroll-speed="2" class="fluid-4-b mb-32"> No hacemos webs </div>
-        <div data-scroll data-scroll-speed="2" class="fluid-10-r"> No hacemos webs </div>
-      </div>
-    </div>
-    <div class="panel">
-      <div class="panel-img"> <img
-          src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-          alt=""> </div>
-      <div class="panel-text">
-        <div data-scroll data-scroll-speed="2" class="fluid-4-b mb-32"> No hacemos webs </div>
-        <div data-scroll data-scroll-speed="2" class="fluid-10-r"> No hacemos webs </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-<section data-scroll  data-scroll-id="2 darkmode" data-scroll-offset="50%,50%" data-scroll-call="pageColor" data-scroll-speed="2"  >
-  <div data-scroll data-scroll-class="opened" data-scroll-repeat="false"  class="container">
+<section data-scroll data-scroll-id="292929 darkmode" data-scroll-offset="50%,50%" data-scroll-call="pageColor"
+  data-scroll-speed="2">
+  <div data-scroll data-scroll-class="opened" data-scroll-repeat="false" class="container">
     <div class="row">
       <div class="col-xs-12  col-sm-6">
-        <div class="fluid-3-b ptr-128 pbr-128 has-light">
+        <div class="fluid-3-b ptr-64 pbr-64 has-light">
           <div class="out-">
             <div class="in-">Timeline<br></div>
           </div>
@@ -199,30 +155,48 @@ eleventyComputed:
       </div>
     </div>
   </div>
-</section>
+  <div class="container">
+    <div class="column-timeline">
+      <div class="column-grid ">
+        <div> AÑO</div>
+        <div>DESCRIPCIÓN</div>
+        <div>ESPECIALIDAD</div>
+      </div>
+    </div>
+
+    <div class="column-timeline-wrap">
 
 
-    <section>
-        <div class="container">
 
-  
-<div class="column-timeline">
-  <div class="column-grid mb-24">
-    <div>NOMBRE</div>
-    <div>AÑO</div>
-    <div>ESPECIALIDAD</div>
+
+    {% call insert.timeline('2001' ,'Freelance','Desarrollador web programming & TPV','PHP, HTML') %} {% endcall %}
+
+
+    {% call insert.timeline('2002' ,'Freelance','CEO & Founder nosolowebs.com','PHP, HTML') %} {% endcall %}
+
+    {% call insert.timeline('2005' ,'Management','Dirección y proyectos en envirtual.com','FLASH, HTML') %} {% endcall %}
+
+    {% call insert.timeline('2006' ,'CTO','Dirección y proyectos en envirtual.com','FLASH, HTML') %} {% endcall %}
+
+    {% call insert.timeline('2007' ,'Project Coordinator','Coordinador y Formador en IES Joan D,austria','FLASH, HTML') %} {% endcall %}
+
+    {% call insert.timeline('2008' ,'Consultor Freelance','Coordinador y Formador en proyectos Frontend en IES Joan D,austria','FLASH, HTML') %} {% endcall %}
+
+    {% call insert.timeline('2010' ,'Teacher','Docente en Proyecto Front end Tecla 3, Tecla 4 ','CSS, HTML') %} {% endcall %}
+
+    {% call insert.timeline('2012' ,'Docente','Docente y Coordinador de Area en Proyecto Visual','CSS, HTML, ADOBE, 3D') %} {% endcall %}
+
+    {% call insert.timeline('2013' ,'Consultant UX','Consultor para marcas de primer nivel ','FULLSTACK') %} {% endcall %}
+
+    {% call insert.timeline('2014' ,'Senior Frontend UX','Design System lead especializado en gamming','Figma, HTML, ANALYTICS') %} {% endcall %}
+
+    {% call insert.timeline('2017' ,'Senior Frontend UX','Design System lead especializado en ecommerce Fast Fashion','Figma, HTML, ANALYTICS') %} {% endcall %}
+
+    {% call insert.timeline('2020' ,'Management','Consultoria en creación de 4 empresas en tiempos de Covid',' MANAGEMENT') %} {% endcall %}
+
+    {% call insert.timeline('2021' ,'Design system Evangelist','Creación de design Systems ',' DESIGN SYSTEMS') %} {% endcall %}
+
+    {% call insert.timeline('2023' ,'Senior Frontend UX','Multiples proyectos para marcas',' DESIGN SYSTEMS') %} {% endcall %}
   </div>
-</div>
-
-
-
-
-{% call insert.timeline('belybel','bbb','ccc','ddd') %} {% endcall %}
-{% call insert.timeline('belybel','bbb','ccc','ddd') %} {% endcall %}
-{% call insert.timeline('belybel','bbb','ccc','ddd') %} {% endcall %}
-{% call insert.timeline('belybel','bbb','ccc','ddd') %} {% endcall %}
-{% call insert.timeline('belybel','bbb','ccc','ddd') %} {% endcall %}
-
-
-        </div>
-    </section>
+  </div>
+</section>

@@ -1,16 +1,16 @@
 ---
 layout: proyectos/proyectos_inner.njk
-permalink: /proyectos/lifeswap
+permalink: /proyectos/kivnon
 tags: ["proyectos"]
 
-imagemini: lifeswap.jpg
+imagemini: kivnon.jpg
 
 
 
-colors: 444444 darkmode
+colors: f6c739 darkmode
 
 
-title: Lifeswap
+title: kivnon
 descripcion: website
 client: Audi
 date: 2021-05-01

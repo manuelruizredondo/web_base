@@ -1,6 +1,4 @@
 {% macro comentario(empresa = '', texto = '', fecha = '',img = '') %}
-
-
 <div class="google-comment">
   <div class="google-bubble mb-16">
     <div class="is-flex w-100 content-sp-between mb-16">
@@ -10,83 +8,58 @@
         <img width="17px" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="">
         <img width="17px" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="">
       </div>
-      <div class="google-logo"> <img width="20px"
-          src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt=""></div>
+      <div class="google-logo"> <img width="20px" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg"
+          alt=""></div>
     </div>
-    <div class="google-text p3 c-black"> 
-
+    <div class="google-text p3 c-black">
       {{ texto }}
-
     </div>
     <div class="google-seemore p3"> Leer más</div>
   </div>
   <div class="is-flex">
-    <div class="pr-16"> <img width="40px"
-        src="https://lh3.googleusercontent.com/a/{{img}}"
-        alt=""></div>
+    <div class="pr-16"> <img width="40px" src="https://lh3.googleusercontent.com/a/{{img}}" alt=""></div>
     <div class="bold">
-      {{ empresa }}  <br>
-      <span class="p3">       {{ fecha }}   </span>
+      {{ empresa }} <br>
+      <span class="p3"> {{ fecha }} </span>
     </div>
   </div>
 </div>
-
-
 {% endmacro %}
-
-
 {% macro team(foto = '', nombre = '', texto = '') %}
-
-        <div class="card-2">
-          <div class="rat-1-1 mb-24">
-            <div class="rat-content">
-              <img src="/assets/static/colaboradores/{{foto}}.jpg" alt="">
-            </div>
-          </div>
-          <div class="fluid-9-b c-primary  p-16">
-     {{nombre}}
-          </div>
-          <div class="p3 p-16 card-2-text">
-            {{texto}}
-          </div>
-        </div>
-
-
+<div class="card-2">
+  <div class="rat-1-1 mb-24">
+    <div class="rat-content">
+      <img src="/assets/static/colaboradores/{{foto}}.jpg" alt="">
+    </div>
+  </div>
+  <div class="fluid-9-b c-primary  p-16">
+    {{nombre}}
+  </div>
+  <div class="p3 p-16 card-2-text">
+    {{texto}}
+  </div>
+</div>
 {% endmacro %}
-
-
-
 {% macro splitenpalabras(frase = '') %}
-
-  {% set palabras = frase.split(" ") %}
-  
-  <span>
-    {% for palabra in palabras %}
-    {% if palabra.startsWith('**') %}
-    <span class="word bold">{{ palabra | replace('**', '') }}</span>
-    {% elseif palabra == '--' %}
-
-    {{ palabra | replace('--', '<br>') | safe }}
-
-
-      {% else %}
-        <span class="word">{{ palabra }}</span>
-      {% endif %}
-    {% endfor %}
-  </span>
+{% set palabras = frase.split(" ") %}
+<span>
+  {% for palabra in palabras %}
+  {% if palabra.startsWith('**') %}
+  <span class="word bold">{{ palabra | replace('**', '') }}</span>
+  {% elseif palabra == '--' %}
+  {{ palabra | replace('--', '<br>') | safe }}
+  {% else %}
+  <span class="word">{{ palabra }}</span>
+  {% endif %}
+  {% endfor %}
+</span>
 {% endmacro %}
-
-
-
 {% macro faqs(faqs1 = '', faqs2='') %}
-
 <div class="accordion">
   <div class="accordion-inner">
     <div class="accordion-header is-flex">
       <div class="fluid-8-r mt-4">
-        
-        {{ faqs1 }} 
-      
+        {{ faqs1 }}
       </div>
       <div class="list-circle ml-24">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -100,36 +73,91 @@
     </div>
     <div class="accordion-content">
       <div class="text-14-r mt-16">
-        {{ faqs2 }} 
+        {{ faqs2 }}
       </div>
     </div>
   </div>
 </div>
-
-
-
 {% endmacro %}
 
 
 
 
-{% macro timeline(imagen = '', nombre = '', año = '', especialidad = '' ) %}
-
-
-<div class="column-timeline">
-  
+{% macro timeline(año = '', nombre = '',descripcion = '', especialidad = '', imagen = '' ) %}
+<div class="column-timeline hoverable2" data-image-src="/assets/static/timeline/{{imagen}}.jpg">
   <div class="line-w"></div>
   <div class="column-grid">
-    <div class="column-img-wrap is-flex">
-      <div class="column-img" > <img src="/assets/static/timeline/{{imagen}}.jpg" alt=""> </div>
-      <div>{{nombre}}</div>
+
+
+    <div>
+      <div class="btn btn-swipe tag-btn">
+        <span class="fluid-48-l" data-label="{{año}}"><span> {{año}}</span></span>
+      </div>
     </div>
-    <div>{{año}}</div>
-    <div>  <div class="tag-btn"> {{especialidad}}  </div> </div>
+
+
+    <div class="">
+      <div class="fluid-6-b mb-8">{{nombre}}</div>
+
+      <div class="text-12-r">{{descripcion}}</div>
+
+    </div>
+
+
+
+
+
+    <div>
+
+      {% for especialidad_part in especialidad.split(',') %}
+      <div class="tag-btn"> {{especialidad_part}}</div>
+      {% endfor %}
+
+
+    </div>
   </div>
 </div>
-
 {% endmacro %}
 
 
 
+{% macro experiment(title = '',img = '', type = '', description = '', año = '') %}
+<div class="panel">
+  <div class="panel-img"> <img src=" /assets/static/proyectos/{{img}}" alt=""> </div>
+  <div class="panel-text">
+    <div class="p13"> 01-01</div>
+    <div class="fluid-4-b mb-64"> {{title}}</div>
+    <div class="panel-info mb-32">
+      <div>
+        <div class="p13 mb-24 o-60">
+          TYPE
+        </div>
+        <div>
+          {% for type_part in type.split(',') %}
+          <div>{{type_part}}</div>
+          {% endfor %}
+        </div>
+      </div>
+      <div>
+        <div class="p13 mb-24 o-60">
+          DESCRIPCIÓN
+        </div>
+        <div>
+          {{description}}
+        </div>
+      </div>
+      <div>
+        <div class="p13 mb-24 o-60">
+          AÑO
+        </div>
+        <div>
+          {{año}}
+        </div>
+      </div>
+    </div>
+    <div>
+      <a class="link-line c-accent" href=""> VER CASO DE ESTUDIO</a>
+    </div>
+  </div>
+</div>
+{% endmacro %}

@@ -14,7 +14,7 @@ h5: ( 16px, 16px, 16px, 16px, 1.2, "bold", ),
 h6: ( 12px, 12px, 12px, 14px, 1.2, "medium", ),
 h7: ( 10px, 10px, 10px, 12px, 1.2, "medium", ),
 h8: ( 8px, 8px, 8px, 10px, 1.2, "medium", ), 
-h9: ( 12px, 16px, 16px, 18px, 1.2, "medium", ), 
+p13: ( 12px, 12px, 13px, 13px, 1.2, "regular", ), 
 
 p1: ( 14px, 14px, 14px, 14px, 1.4, "regular", ), 
 p2: ( 14px, 14px, 16px, 18px, 1.4, "regular", ), 
@@ -269,19 +269,24 @@ $container: 992px;
 
 // massimodutti color MD 2022
 $c-white: #ffffff;
-$c-black: #171a22;
+$c-black: #0f0f0f;
+
+
 
 $c-dark-grey: #8e8e8e;
 $c-middle-grey: #e3e3e3;
 $c-light-grey: #ebecf5;
 
 $c-primary: #0E0E11;
+$c-accent:#f70154;
 $c-error: #b40016;
 $c-info: #1a32a4;
 
 $c-success: #76ae4a;
 $c-warning: #ffc700;
 $c-feel: #fb9962;
+
+
 // fin massimodutti color MD 2022
 
 $height-md: 200px;

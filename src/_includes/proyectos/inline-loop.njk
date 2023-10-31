@@ -1,0 +1,41 @@
+<div class="panel">
+  <div class="panel-img"> <img src=" /assets/static/proyectos/{{experiment.data.img}}" alt=""> </div>
+  <div class="panel-text">
+    <div class="p13"> 0{{counterline}} - 0{{ loop.length }}</div>
+    <div class="fluid-4-b mb-64 text-capitalize"> {{experiment.data.title}}</div>
+    <div class="panel-info mb-32">
+      <div>
+        <div class="p13 mb-24 o-60">
+          TYPE    
+        </div>
+        <div class="p13 mb-24 ">
+          <div>{{experiment.data.type}}</div>
+        </div>
+      </div>
+      <div>
+        <div class="p13 mb-24 o-60">
+          DESCRIPCIÓN
+        </div>
+        <div class="p13 mb-24 ">
+          {{experiment.data.description}}
+        </div>
+      </div>
+      <div>
+        <div class="p13 mb-24 o-60">
+          AÑO
+        </div>
+        <div class="p13 mb-24">
+
+
+            <span class="fluid-48-l" >       {{experiment.data.año}}</span>    
+     
+
+        </div>
+      </div>
+    </div>
+    <div>
+
+      <a class="link-line c-accent " href="{{ experiment.url }}"> VER CASO DE ESTUDIO</a> 
+    </div>
+  </div>
+</div>

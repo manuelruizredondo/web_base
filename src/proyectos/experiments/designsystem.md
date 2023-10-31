@@ -1,21 +1,21 @@
 ---
 layout: proyectos/proyectos_inner.njk
-permalink: /proyectos/qartum
-tags: ["proyectos"]
+permalink: /proyectos/designsystem
+tags: ["experiment"]
 
-imagemini: qartum.jpg
+imagemini: designsystem.jpg
 
-
+id: 1
 
 colors: 888888 darkmode
 
 
-title: qartum
-descripcion: website
+title: design system
+type: website, dpoidfjs ,odsfjosj
 client: Audi
-date: 2021-05-01
-
-
+description: odfjfdoijdfofj
+año: 2021
+img: dsmini.jpg
 
 
 imagelong: /assets/static/proyectos/audi/audilong.jpg

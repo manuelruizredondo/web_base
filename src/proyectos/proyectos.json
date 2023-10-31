@@ -1,8 +1,0 @@
-
-{
-	"layout": "blog/blog_inner.njk",
-	"author": "Manuel R",
-	"tags": ["proyectos"],
-	"tag": "proyectos",
-	"categoryName": "proyectos"
-}

@@ -7,7 +7,7 @@ const select = (e) => document.querySelector(e);
 const selectAll = (e) => document.querySelectorAll(e);
 
 
-let colors = ["#0E0E11", "yellow", "blue", "gray", "purple", "gray"];
+let colors = ["#fe5f5e", "#fd945e", "#fdcf5f", "#b4db9d", "#abdaf4", "#dca4d5"];
 let ciclo = true;
 
 
@@ -167,8 +167,8 @@ function initbg() {
 
 	gsap.to(".outtext-1 .intext", { delay: 0.2, top: "0", duration: 1, ease: Expo.easeInOut, });
 	gsap.to(".outtext-2 .intext", { delay: 0.4, top: "0", duration: 1, ease: Expo.easeInOut, });
-	gsap.to(".outtext-3 .intext", { delay: 0.5, top: "0", duration: 1, ease: Expo.easeInOut, });
-	gsap.to(".outtext-4 .intext", { delay: 0.6, top: "0", duration: 1, ease: Expo.easeInOut, });
+	// gsap.to(".outtext-3 .intext", { delay: 0.5, top: "0", duration: 1, ease: Expo.easeInOut, });
+	// gsap.to(".outtext-4 .intext", { delay: 0.6, top: "0", duration: 1, ease: Expo.easeInOut, });
 	gsap.to(".image-digital", { delay: 0.7, opacity: "1", duration: 1, ease: Expo.easeInOut, });
 
 }
@@ -181,8 +181,48 @@ function initPage() {
 function cursor() {
   var cursor = document.querySelector(".cursor");
   var follower = document.querySelector(".cursor-follow");
+  var imageToLoad = document.getElementById("image-to-load");
+
+
   var hoverables = document.querySelectorAll(".hoverable");
   var drags = document.querySelectorAll(".drag");
+
+  var hoverables2 = document.querySelectorAll(".hoverable2");
+
+
+
+
+
+  for (let i = 0; i < hoverables2.length; i++) {
+    hoverables2[i].addEventListener("mouseenter", function () {
+      // Cambia la fuente de la imagen
+      const imageSrc = this.getAttribute("data-image-src");
+
+      imageToLoad.src = imageSrc;
+
+      // Muestra la imagen
+      document.querySelector("#image-to-load").style.display = "block";
+    });
+  
+    hoverables2[i].addEventListener("mouseleave", function () {
+      // Oculta la imagen cuando el mouse sale de la div
+      document.querySelector("#image-to-load").style.display = "none";
+    });
+  
+    hoverables2[i].addEventListener("click", onMouseHoverOut);
+  }
+
+
+  for (let i = 0; i < hoverables2.length; i++) {
+    hoverables2[i].addEventListener("mouseenter", onMouseHover);
+
+
+
+    hoverables2[i].addEventListener("mouseleave", onMouseHoverOut);
+    hoverables2[i].addEventListener("click", onMouseHoverOut);
+  }
+
+
   for (let i = 0; i < hoverables.length; i++) {
     hoverables[i].addEventListener("mouseenter", onMouseHover);
     hoverables[i].addEventListener("mouseleave", onMouseHoverOut);
@@ -198,6 +238,9 @@ function cursor() {
     posY2 = 0;
   var mouseX = 0,
     mouseY = 0;
+
+
+
   gsap.to(
     {},
     {
@@ -213,21 +256,33 @@ function cursor() {
       },
     }
   );
+
+
+  
+  
   document.addEventListener("mousemove", function (e) {
     mouseX = e.clientX;
     mouseY = e.clientY;
   });
   // Hover an element
+
+
   function onMouseHover() {
     gsap.to(follower, {
       duration: 0.3,
-      css: { backgroundColor: "#fff", scale: 4 },
+      css: { backgroundColor: "#fff", width: 150,height: 120, borderRadius:2 },
     });
+
+
+
+
   }
+
+
   function onMouseHoverOut() {
     gsap.to(follower, {
       duration: 0.3,
-      css: { backgroundColor: "#f70154", scale: 1 },
+      css: { backgroundColor: "#f70154",  width: 24,height: 24, borderRadius:'100%' },
     });
   }
   function onDragOn() {
@@ -238,9 +293,13 @@ function cursor() {
   }
 }
 function homeActions(container) {
+
+  if (window.innerWidth > 600) {
   let pinWrap = document.querySelector(".pin-wrap");
-  let pinWrapWidth = pinWrap.offsetWidth;
+  let pinWrapWidth = pinWrap.offsetWidth + 100;
   let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+
+
   gsap.to(".pin-wrap", {
     scrollTrigger: {
       scroller: container.querySelector("[data-scroll-container]"), //locomotive-scroll
@@ -254,6 +313,7 @@ function homeActions(container) {
     x: -horizontalScrollLength,
     ease: "none",
   });
+  
   let sections = gsap.utils.toArray(".panel");
   let scrollTween = gsap.to(sections, {
     xPercent: -100 * (sections.length - 1),
@@ -267,7 +327,7 @@ function homeActions(container) {
     },
   });
   // red section
-
+}
 }
 function changeBackgroundColorOnScrollEnter() {
   setTimeout(function () {
@@ -331,7 +391,6 @@ miParrafo.textContent = "Contacta";
 
 
 
-console.log("no entraaaaaaaaaaaaaaa" + miParrafo.textContent)
 }
 
 

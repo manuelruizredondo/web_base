@@ -1,6 +1,12 @@
 
 
 $padding-top: (
+  ptr-64: (
+    32px,
+    32px,
+    64px,
+    64px,
+  ),
   ptr-120: (
     64px,
     64px,
@@ -16,6 +22,12 @@ $padding-top: (
 ) ;
 $pb: 'padding-bottom';
 $padding-bottom: (
+  pbr-64: (
+    32px,
+    32px,
+    64px,
+    64px,
+  ),
   pbr-128: (
     64px,
     64px,
