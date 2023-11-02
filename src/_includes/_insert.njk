@@ -40,20 +40,39 @@
   </div>
 </div>
 {% endmacro %}
-{% macro splitenpalabras(frase = '') %}
+
+
+
+
+{% macro splitenpalabras(frase = '', animationDelay='' ) %}
+
+
+
+{%set animationTime = 140 %}
+
 {% set palabras = frase.split(" ") %}
+
+
+
 <span>
   {% for palabra in palabras %}
-  {% if palabra.startsWith('**') %}
-  <span class="word bold">{{ palabra | replace('**', '') }}</span>
-  {% elseif palabra == '--' %}
-  {{ palabra | replace('--', '<br>') | safe }}
-  {% else %}
-  <span class="word">{{ palabra }}</span>
-  {% endif %}
-  {% endfor %}
+
+     {% if palabra.startsWith('**') %}
+        <span class="word bold" style="animation-delay: {{ animationDelay }}ms ">{{ palabra | replace('**', '') }}</span>
+     {% elseif palabra == '--' %}
+        {{ palabra | replace('--', '<br>') | safe }}
+     {% else %}
+        <span class="word" style="animation-delay: {{ animationDelay }}ms ">{{ palabra }}</span>
+     {% endif %}
+
+{% set  animationDelay = animationDelay + animationTime %}
+
+  {% endfor%}
 </span>
 {% endmacro %}
+
+
+
 {% macro faqs(faqs1 = '', faqs2='') %}
 <div class="accordion">
   <div class="accordion-inner">
@@ -82,42 +101,43 @@
 
 
 
-
 {% macro timeline(año = '', nombre = '',descripcion = '', especialidad = '', imagen = '' ) %}
 <div class="column-timeline hoverable2" data-image-src="/assets/static/timeline/{{imagen}}.jpg">
   <div class="line-w"></div>
   <div class="column-grid">
-
-
     <div>
       <div class="btn btn-swipe tag-btn">
         <span class="fluid-48-l" data-label="{{año}}"><span> {{año}}</span></span>
       </div>
     </div>
-
-
     <div class="">
       <div class="fluid-6-b mb-8">{{nombre}}</div>
-
       <div class="text-12-r">{{descripcion}}</div>
-
     </div>
-
-
-
-
-
     <div>
-
       {% for especialidad_part in especialidad.split(',') %}
       <div class="tag-btn"> {{especialidad_part}}</div>
       {% endfor %}
-
-
     </div>
   </div>
 </div>
 {% endmacro %}
+
+
+{% macro timeline2(nombre = '', imagen = '' ) %}
+<div class="column-timeline hoverable2" data-image-src="/assets/static/timeline/{{imagen}}.jpg">
+  <div class="line-w"></div>
+  <div class="column-grid">
+
+    <div class="">
+      <div class="fluid-3-b mb-8">{{nombre}}</div>
+
+    </div>
+
+  </div>
+</div>
+{% endmacro %}
+
 
 
 

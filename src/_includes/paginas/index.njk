@@ -11,11 +11,11 @@ eleventyComputed:
 ---
 {% import "_insert.njk" as insert %}
 <section data-scroll data-scroll-id="0f0f0f darkmode" data-scroll-offset="50%,50%" data-scroll-call="pageColor"
-  class=" slide-section ">
+  class=" slide-section opened "  data-scroll-repeat="false" data-scroll-class="opened" >
   <div class="container">
     <div class="row">
-      <div class="col-xs-8 col-sm-8 has-light front-section">
-        <div data-scroll data-scroll-speed="2" class="height-full is-flex flex-column content-center ">
+      <div class="col-xs-10 col-sm-8 col-lg-6 has-light front-section">
+        <div data-scroll data-scroll-speed="2" class="height-full is-flex flex-column content-center is-home ">
           <h1 class="fluid-2-b">
             <div class="outtext-1">
               <div class="intext">Digital</div>
@@ -25,9 +25,8 @@ eleventyComputed:
               </div>
             </div>
           </h1>
-          <h1 class="fluid-4-b">
-            {% call insert.splitenpalabras('Nuestra historia tiene raíces en la **creatividad, pero nuestro ADN es
-            **100% **digital.') %} {% endcall %}
+          <h1 class="fluid-4-b subtitulo-home">
+            {% call insert.splitenpalabras('Nuestra historia tiene raíces en la **creatividad, pero nuestro ADN es **100% **digital.',3000) %} {% endcall %}
           </h1>
         </div>
       </div>
@@ -37,24 +36,21 @@ eleventyComputed:
     </div>
   </div>
 </section>
-<section data-scroll data-scroll-id="0f0f0f darkmode" data-scroll-offset="50%,50%" data-scroll-call="pageColor"
+<section data-scroll data-scroll-id="0f0f0f darkmode" data-scroll-call="pageColor" data-scroll-offset="50%,50%" 
   class=" has-light  front-section ptr-64 pbr-64">
   <div class="container">
     <div class="row">
-      <div class="col-xs-10 col-sm-6">
+      <div class="col-xs-10 col-sm-7">
         <div data-scroll data-scroll-speed="2" data-scroll-class="opened" data-scroll-repeat="false" class="fluid-4-b">
-          <div class="out-">
-            <div class="in-">No hacemos webs, <br></div>
-          </div>
-          <div class="out-">
-            <div class="in-">creamos <b>estrategias</b> </div>
-          </div>
-          <div class="fluid-8-l mt-32 out-">
-            <div class="in-">
-              Desarrollando estrategias desde el 2001, hemos tenido el privilegio de trabajar con más de 500 clientes en
-              todo el mundo, incluidas start ups, pymes, grandes corporaciones y organizaciones gubernamentales . Con
-              nuestra experiencia en la comprensión de la dinámica de la industria y la mentalidad de la audiencia
-            </div>
+
+          {% call insert.splitenpalabras('No hacemos webs, -- creamos **estrategias ,',0) %} {% endcall %}
+
+
+
+          <div class="fluid-5-l mt-32 out-">
+
+            {% call insert.splitenpalabras('Desarrollando estrategias desde el 2001, hemos tenido el privilegio de trabajar con más de 500 clientes en todo el mundo, incluidas start ups, pymes, grandes corporaciones y organizaciones gubernamentales . Con nuestra experiencia en la comprensión de la dinámica de la industria y la mentalidad de la audiencia',140*6) %} {% endcall %}
+
           </div>
         </div>
       </div>
@@ -69,7 +65,7 @@ eleventyComputed:
   data-scroll-speed="2">
   <div data-scroll data-scroll-class="opened" class="container" data-scroll-repeat="false">
     <div class="row">
-      <div class="col-xs-12  col-sm-6">
+      <div class="col-xs-12  col-sm-8">
         <div class="fluid-3-b ptr-64 pbr-64 has-light">
           <div class="out-">
             <div class="in-">Clientes<br></div>
@@ -94,7 +90,7 @@ eleventyComputed:
 <section data-scroll data-scroll-offset="50%,50%" data-scroll-speed="2">
   <div data-scroll data-scroll-offset="50%,50%"  data-scroll-class="opened" data-scroll-repeat="false" class="container">
     <div class="row">
-      <div class="col-xs-12  col-sm-6">
+      <div class="col-xs-12  col-sm-8">
         <div class="fluid-3-b ptr-64 pbr-64 has-light">
           <div class="out-">
             <div class="in-">Nuestros<br></div>
@@ -113,7 +109,7 @@ eleventyComputed:
 <section data-scroll data-scroll-offset="50%,50%" data-scroll-speed="2">
   <div data-scroll data-scroll-class="opened" data-scroll-repeat="false" class="container">
     <div class="row">
-      <div class="col-xs-12  col-sm-6">
+      <div class="col-xs-12  col-sm-8">
         <div class="fluid-3-b ptr-64 pbr-64 has-light">
           <div class="out-">
             <div class="in-">Nuestros<br></div>
@@ -143,10 +139,10 @@ eleventyComputed:
   </div>
 </section>
 <section data-scroll data-scroll-id="292929 darkmode" data-scroll-offset="50%,50%" data-scroll-call="pageColor"
-  data-scroll-speed="2">
-  <div data-scroll data-scroll-class="opened" data-scroll-repeat="false" class="container">
+  data-scroll-speed="2" data-scroll-class="opened" data-scroll-repeat="false">
+  <div data-  class="container">
     <div class="row">
-      <div class="col-xs-12  col-sm-6">
+      <div class="col-xs-12  col-sm-8">
         <div class="fluid-3-b ptr-64 pbr-64 has-light">
           <div class="out-">
             <div class="in-">Timeline<br></div>
@@ -169,34 +165,34 @@ eleventyComputed:
 
 
 
-    {% call insert.timeline('2001' ,'Freelance','Desarrollador web programming & TPV','PHP, HTML') %} {% endcall %}
+    {% call insert.timeline('2001' ,'Freelance','Desarrollador web programming & TPV','PHP, HTML','2001') %} {% endcall %}
 
 
-    {% call insert.timeline('2002' ,'Freelance','CEO & Founder nosolowebs.com','PHP, HTML') %} {% endcall %}
+    {% call insert.timeline('2002' ,'Freelance','CEO & Founder nosolowebs.com','PHP, HTML','2002') %} {% endcall %}
 
-    {% call insert.timeline('2005' ,'Management','Dirección y proyectos en envirtual.com','FLASH, HTML') %} {% endcall %}
+    {% call insert.timeline('2005' ,'Management','Dirección y proyectos en envirtual.com','FLASH, HTML','2005') %} {% endcall %}
 
-    {% call insert.timeline('2006' ,'CTO','Dirección y proyectos en envirtual.com','FLASH, HTML') %} {% endcall %}
+    {% call insert.timeline('2006' ,'CTO','Dirección y proyectos en envirtual.com','FLASH, HTML','2006') %} {% endcall %}
 
-    {% call insert.timeline('2007' ,'Project Coordinator','Coordinador y Formador en IES Joan D,austria','FLASH, HTML') %} {% endcall %}
+    {% call insert.timeline('2007' ,'Project Coordinator','Coordinador y Formador en IES Joan D,austria','FLASH, HTML','2007') %} {% endcall %}
 
-    {% call insert.timeline('2008' ,'Consultor Freelance','Coordinador y Formador en proyectos Frontend en IES Joan D,austria','FLASH, HTML') %} {% endcall %}
+    {% call insert.timeline('2008' ,'Consultor Freelance','Coordinador y Formador en proyectos Frontend en IES Joan D,austria','FLASH, HTML','2008') %} {% endcall %}
 
-    {% call insert.timeline('2010' ,'Teacher','Docente en Proyecto Front end Tecla 3, Tecla 4 ','CSS, HTML') %} {% endcall %}
+    {% call insert.timeline('2010' ,'Teacher','Docente en Proyecto Front end Tecla 3, Tecla 4 ','CSS, HTML','2010') %} {% endcall %}
 
-    {% call insert.timeline('2012' ,'Docente','Docente y Coordinador de Area en Proyecto Visual','CSS, HTML, ADOBE, 3D') %} {% endcall %}
+    {% call insert.timeline('2012' ,'Docente','Docente y Coordinador de Area en Proyecto Visual','CSS, HTML, ADOBE, 3D','2012') %} {% endcall %}
 
-    {% call insert.timeline('2013' ,'Consultant UX','Consultor para marcas de primer nivel ','FULLSTACK') %} {% endcall %}
+    {% call insert.timeline('2013' ,'Consultant UX','Consultor para marcas de primer nivel ','FULLSTACK','2013') %} {% endcall %}
 
-    {% call insert.timeline('2014' ,'Senior Frontend UX','Design System lead especializado en gamming','Figma, HTML, ANALYTICS') %} {% endcall %}
+    {% call insert.timeline('2014' ,'Senior Frontend UX','Design System lead especializado en gamming','Figma, HTML, ANALYTICS','2014') %} {% endcall %}
 
-    {% call insert.timeline('2017' ,'Senior Frontend UX','Design System lead especializado en ecommerce Fast Fashion','Figma, HTML, ANALYTICS') %} {% endcall %}
+    {% call insert.timeline('2017' ,'Senior Frontend UX','Design System lead especializado en ecommerce Fast Fashion','Figma, HTML, ANALYTICS','2017') %} {% endcall %}
 
-    {% call insert.timeline('2020' ,'Management','Consultoria en creación de 4 empresas en tiempos de Covid',' MANAGEMENT') %} {% endcall %}
+    {% call insert.timeline('2020' ,'Management','Consultoria en creación de 4 empresas en tiempos de Covid',' MANAGEMENT','2020') %} {% endcall %}
 
-    {% call insert.timeline('2021' ,'Design system Evangelist','Creación de design Systems ',' DESIGN SYSTEMS') %} {% endcall %}
+    {% call insert.timeline('2021' ,'Design system Evangelist','Creación de design Systems ',' DESIGN SYSTEMS','2021') %} {% endcall %}
 
-    {% call insert.timeline('2023' ,'Senior Frontend UX','Multiples proyectos para marcas',' DESIGN SYSTEMS') %} {% endcall %}
+    {% call insert.timeline('2023' ,'Senior Frontend UX','Multiples proyectos para marcas',' DESIGN SYSTEMS','2023') %} {% endcall %}
   </div>
   </div>
 </section>

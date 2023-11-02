@@ -4,7 +4,7 @@
 @import "../../../node_modules/holygrailcss/scss/style.scss";
 @import "_animations.scss";
 @import "_cursor.scss";
-@import "_menu.scss";
+
 @import "_menu2.scss";
 @import "_blog.scss";
 @import "_video.scss";
@@ -167,11 +167,24 @@ header {
   width: 100vw;
   height: 100vh;
   background-color: $c-accent;
-  z-index: 1;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+
 }
 .footer {
+  color: $c-black;
   position: relative;
   z-index: 1;
+  .hover-line {
+
+    background-color: $bg-dark;
+
+}
 }
 .pined {
   position: -webkit-sticky;
@@ -193,17 +206,7 @@ header {
 .vertical-reveal-outer {
   overflow: hidden;
 }
-.image-digital {
-  position: absolute;
-  right: 5%;
-  top: 20px;
-  width: 65%;
-  @media (min-width: 1280px) {
-    right: 5%;
-    top: 100px;
-    width: 35%;
-  }
-}
+
 [class*="anim-wrap-"] {
   overflow: hidden;
   position: relative;
@@ -224,19 +227,12 @@ header {
   width: 100%;
   max-width: 100%;
   @media (min-width: $break-sm) {
-    padding-right: 12em;
-    padding-left: 12em;
+    padding-right: 7em;
+    padding-left: 7em;
     width: 100%;
     max-width: 100%;
   }
-  @media (min-width: $break-md) {
-    width: 100%;
-    max-width: 100%;
-  }
-  @media (min-width: $break-lg) {
-    width: 100%;
-    max-width: 100%;
-  }
+
 }
 .container-hero {
   padding: 0em 2.5em 4em 2.5em;
@@ -246,8 +242,8 @@ header {
   width: 100%;
   max-width: 100%;
   @media (min-width: $break-sm) {
-    padding-right: 12em;
-    padding-left: 12em;
+    padding-right: 7em;
+    padding-left: 7em;
     width: 100%;
     max-width: 100%;
   }
@@ -345,21 +341,7 @@ b,
   @include font-bold;
   color: $c-accent;
 }
-.image-digital {
-  position: absolute;
-  right: 5%;
-  top: 20px;
-  opacity: 0;
-  width: 65%;
-}
-@media (min-width: 1280px) {
-  .image-digital {
-    right: 5%;
-    top: 100px;
-    opacity: 0;
-    width: 35%;
-  }
-}
+
 .out- {
   overflow: hidden;
   position: relative;
@@ -500,7 +482,7 @@ b,
     padding: 6em 2.5em 4em 2.5em;
   }
   height: 100vh;
-  padding: 8em 8em 0em 8em;
+  padding: 8em 7em 0em 7em;
 }
 .hover-line {
   width: 0;
@@ -514,6 +496,17 @@ b,
   }
 }
 .column-timeline-wrap {
+  &:hover {
+    color: #3f3f3f;
+    transition: all 0.2s ease;
+    .tag-btn {
+      transition: all 0.2s ease;
+      border: 1px solid #3f3f3f;
+    }
+  }
+}
+
+.column-timeline-wrap-about {
   &:hover {
     color: #3f3f3f;
     transition: all 0.2s ease;
@@ -613,7 +606,79 @@ b,
   }
 }
 .boxer {
-  width: 20px;
-  height: 20px;
-  background-color: red;
+  width: 30px;
+  height: 30px;
+  background-color: $c-accent;
+  position: absolute;
+  right: -30px;
+  border-radius: 50%;
+
+}
+
+.experiment-bg{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 260px;
+  mix-blend-mode: overlay;
+  opacity: .3;
+}
+
+.especial{
+  position: relative;
+}
+
+.is-interior{
+  background-color: $bg-dark;
+}
+
+.mini-titulo{
+  color: #535353;
+  font-size: 15px;
+  font-style: normal;
+  line-height: 33.773px;
+  letter-spacing: 13px;
+  @include font-regular();
+}
+
+
+
+
+.bg-logo-svg{
+  width: 70px;
+  height: 70px;
+  .path1{
+    fill:$c-accent;
+     stroke:#ffffff;
+    stroke-dasharray: 280;
+    stroke-dashoffset: 280;
+    animation: punto 3s ease infinite alternate ;
+
+  }
+
+  .path2{
+    fill:$c-accent;
+     stroke:#ffffff;
+    stroke-dasharray: 280;
+    stroke-dashoffset: 280;
+    animation: punto 3s ease infinite alternate ;
+
+  }
+
+
+
+}
+
+
+@keyframes punto {
+  from {
+    stroke-dashoffset: 280;
+        -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }

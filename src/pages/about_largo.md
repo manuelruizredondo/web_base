@@ -1,6 +1,6 @@
 ---
 layout: /paginas/about.njk
-permalink: /about/
+permalink: /about-largo/
 title: About Us
 subtitle: There’s more to us than just creating beautiful designs.
 descripcion: websiteabout

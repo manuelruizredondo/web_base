@@ -278,6 +278,12 @@
     animation: 1.5s verticalImage 1 cubic-bezier(0.19, 1, 0.22, 1);
     animation-fill-mode: both;
   }
+
+  .img-wrap .img-inner2 {
+    width: 100%;
+    animation: 1.5s verticalImage 1 cubic-bezier(0.19, 1, 0.22, 1);
+    animation-fill-mode: both;
+  }
   .kv-block11-num:after {
     animation: lineFade 3s cubic-bezier(0.19, 1, 0.22, 1) 1;
     animation-fill-mode: both;
@@ -306,21 +312,7 @@
     opacity: 0;
   }
 }
-@mixin delay-anim() {
-  @for $i from 1 through 500 {
-    $delay-value: $i * 140ms;
-    .is-inview .word:nth-child(#{$i}) {
-      animation-delay: $delay-value;
-    }
-  }
-  @for $i from 1 through 500 {
-    $delay-value: $i * 140ms;
-    .is-inview .delay-#{$i} {
-      animation-delay: $delay-value;
-    }
-  }
-}
-@include delay-anim;
+
 
 @mixin delay-out() {
   .opened .out- {
@@ -340,13 +332,16 @@
 
 
 
-.is-inview .word {
-  animation: fadein 1.5s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
+
 .word {
   position: relative;
   display: inline-block;
   opacity: 0;
+  .opened  & {
+    animation: fadein 1.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+
 }
 
 
@@ -414,6 +409,9 @@
 
 .line-anim {
   position: relative;
+
+
+
   &::before {
     transform: scaleX(0);
     transform-origin: bottom right;
@@ -437,4 +435,12 @@
     z-index: -1;
     transition: transform 0.3s ease;
   }
+}
+a.line-anim{
+  transition: all .3s ease;
+}
+
+.darkmode a.line-anim {
+  transition: all ease 0.3s;
+  color: #000000;
 }
