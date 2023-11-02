@@ -192,8 +192,14 @@ header {
   top: 0;
 }
 .text-block {
-  max-width: 300px;
-  padding-bottom: 16em;
+
+
+  @media (min-width: $break-sm) {
+    max-width: 300px;
+    padding-bottom: 16em;
+  }
+
+
 }
 .text-block-center {
   margin: 0 auto;
@@ -235,12 +241,15 @@ header {
 
 }
 .container-hero {
-  padding: 0em 2.5em 4em 2.5em;
+ padding-left: 24px;
+ padding-right: 24px;
   margin-right: 0;
   margin-left: 0;
   position: relative;
   width: 100%;
   max-width: 100%;
+
+
   @media (min-width: $break-sm) {
     padding-right: 7em;
     padding-left: 7em;
@@ -606,8 +615,8 @@ b,
   }
 }
 .boxer {
-  width: 30px;
-  height: 30px;
+  width: 2vw;
+  height: 2vw;
   background-color: $c-accent;
   position: absolute;
   right: -30px;
@@ -628,6 +637,10 @@ b,
 
 .especial{
   position: relative;
+  @media (max-width: $break-md) {
+    padding-left:24px ;
+  }
+
 }
 
 .is-interior{
@@ -656,6 +669,7 @@ b,
     stroke-dashoffset: 280;
     animation: punto 3s ease infinite alternate ;
 
+
   }
 
   .path2{
@@ -663,7 +677,8 @@ b,
      stroke:#ffffff;
     stroke-dasharray: 280;
     stroke-dashoffset: 280;
-    animation: punto 3s ease infinite alternate ;
+    animation: punto s ease infinite alternate ;
+    animation-delay: 2s;
 
   }
 

@@ -20,7 +20,7 @@
       position: absolute;
       content: "";
       width: 100%;
-      background-color: $c-black;
+
       height: 100%;
       z-index: 1;
     }
@@ -34,20 +34,20 @@
     }
   }
 
-  .height-hero + .section {
-    @media screen and (max-width:  #{$break-sm - 1}) {
-      padding-top: 40vw;
-    }
-    @media (min-width: $break-md) {
-      padding-top: 15vw;
+  // .height-hero + .section {
+  //   @media screen and (max-width:  #{$break-sm - 1}) {
+  //     padding-top: 40vw;
+  //   }
+  //   @media (min-width: $break-md) {
+  //     padding-top: 15vw;
 
-    }
-  }
+  //   }
+  // }
   .section {
     position: relative;
     z-index: 9;
     @media screen and (max-width: 1000px) {
-      padding: 6em 2.5em 4em 2.5em;
+      padding: 3em 2.5em 3em 2.5em;
     }
     padding: 8em 7em 8em 7em;
   }

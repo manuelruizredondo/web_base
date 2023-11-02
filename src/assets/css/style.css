@@ -11521,7 +11521,7 @@ a.line-anim {
 }
 .menu-gsap .openButton {
   top: -50px;
-  right: 7em;
+  right: 24px;
   transition: all 0.2s ease;
   position: absolute;
   z-index: 60;
@@ -11586,9 +11586,15 @@ a.line-anim {
   top: -55px;
   z-index: 20;
   width: 35px;
-  left: 7em;
+  left: 24px;
   transition: all 0.2s ease;
   mix-blend-mode: difference;
+}
+@media (min-width: 768px) {
+  .menu-logo {
+    left: 7em;
+    top: 55px;
+  }
 }
 .menu-logo svg {
   width: 100%;
@@ -11635,7 +11641,7 @@ a.line-anim {
   }
 }
 .show-logo .menu-logo {
-  top: 55px;
+  top: 16px;
 }
 @media (min-width: 992px) {
   .show-logo .menu-logo {
@@ -11643,7 +11649,7 @@ a.line-anim {
   }
 }
 .show-logo .openButton {
-  top: 65px;
+  top: 24px;
 }
 @media (min-width: 992px) {
   .show-logo .openButton {
@@ -12013,7 +12019,6 @@ a.line-anim {
   position: absolute;
   content: "";
   width: 100%;
-  background-color: #0E0E11;
   height: 100%;
   z-index: 1;
 }
@@ -12030,17 +12035,6 @@ a.line-anim {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .height-hero + .section {
-    padding-top: 40vw;
-  }
-}
-@media (min-width: 1000px) {
-  .height-hero + .section {
-    padding-top: 15vw;
-  }
-}
-
 .section {
   position: relative;
   z-index: 9;
@@ -12048,7 +12042,7 @@ a.line-anim {
 }
 @media screen and (max-width: 1000px) {
   .section {
-    padding: 6em 2.5em 4em 2.5em;
+    padding: 3em 2.5em 3em 2.5em;
   }
 }
 
@@ -12700,9 +12694,11 @@ header {
   top: 0;
 }
 
-.text-block {
-  max-width: 300px;
-  padding-bottom: 16em;
+@media (min-width: 768px) {
+  .text-block {
+    max-width: 300px;
+    padding-bottom: 16em;
+  }
 }
 
 .text-block-center {
@@ -12752,7 +12748,8 @@ header {
 }
 
 .container-hero {
-  padding: 0em 2.5em 4em 2.5em;
+  padding-left: 24px;
+  padding-right: 24px;
   margin-right: 0;
   margin-left: 0;
   position: relative;
@@ -13156,8 +13153,8 @@ b,
 }
 
 .boxer {
-  width: 30px;
-  height: 30px;
+  width: 2vw;
+  height: 2vw;
   background-color: #f70154;
   position: absolute;
   right: -30px;
@@ -13177,6 +13174,11 @@ b,
 
 .especial {
   position: relative;
+}
+@media (max-width: 1000px) {
+  .especial {
+    padding-left: 24px;
+  }
 }
 
 .is-interior {
@@ -13209,7 +13211,8 @@ b,
   stroke: #ffffff;
   stroke-dasharray: 280;
   stroke-dashoffset: 280;
-  animation: punto 3s ease infinite alternate;
+  animation: punto s ease infinite alternate;
+  animation-delay: 2s;
 }
 
 @keyframes punto {
